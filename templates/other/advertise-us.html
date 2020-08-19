@@ -1,0 +1,698 @@
+{% extends "base/base_templates2.html" %}
+{% load static %}
+{% block content %}
+
+<!----------------COntent start-------------->
+<style>
+	.select2 .selection span.select2-selection.select2-selection--single {
+    position: unset!important;
+}
+.tab-content .table td, .table th {
+    padding: 10px 2px!important;
+    text-align: center;
+}
+span.select2.select2-container.select2-container--default{
+	width: 100%!important;
+}
+</style>
+<section id="content-wrapper">
+	<div class="container-fluid">
+		<div class="row p-t-b-20">
+			<div class="col-md-12">
+				<div class="tour-head text-center">
+					<div class="tour-head-title">
+						<h1>Why Premium Lisiting</h1>
+					</div>
+				</div>
+				<div class="row mt-40">
+					<div class="col-md-4 wd-32">
+						<div class="why-card">
+							<!--  <i class="fa fa-home"></i> -->
+							<img src="{% static 'images/hotel.png' %}">
+							<h2>Hotel</h2>
+							<p class="hidden-md">Reference site about Lorem Ipsum, giving information on its origins.</p>
+						</div>
+					</div>
+					<div class="col-md-4 wd-32">
+						<div class="why-card">
+							<!-- <i class="fa fa-calendar"></i> -->
+							<img src="{% static 'images/calendar.png' %}">
+							<h2>Events</h2>
+							<p class="hidden-md">Reference site about Lorem Ipsum, giving information on its origins.</p>
+						</div>
+					</div>
+					<div class="col-md-4 wd-32">
+						<div class="why-card">
+							<!-- <i class="fa fa-bed"></i> -->
+							<img src="{% static 'images/homestay.png' %}">
+							<h2>HomeStay</h2>
+							<p class="hidden-md">Reference site about Lorem Ipsum, giving information on its origins.</p>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="tour-head text-center mt-40">
+					<div class="tour-head-title">
+						<h1>Price Listing</h1>
+					</div>
+				</div>
+				<div class="row mt-40 pricing-table">
+					<div class="col-md-2 place-list">
+						<table class="table table-bordered table-hover mt-40 table-destination">
+							<tr>
+								<th>Destination</th>
+							</tr>
+							<tbody>
+								<tr>
+									<td>Goa</td>
+								</tr>
+								<tr>
+									<td>Mumbai</td>
+								</tr>
+								<tr>
+									<td>Delhi</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-10 price-list-show">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item"> <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="home" aria-selected="true">Hotel</a>
+							</li>
+							<li class="nav-item"> <a class="nav-link" id="homestay-tab" data-toggle="tab" href="#homestay" role="tab" aria-controls="profile" aria-selected="false">HomeStay</a>
+							</li>
+							<li class="nav-item"> <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="contact" aria-selected="false">Events</a>
+							</li>
+							<li class="nav-item"> <a class="nav-link" id="operator-tab" data-toggle="tab" href="#operator" role="tab" aria-controls="contact" aria-selected="false">Tour Operator</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
+								<div class="table-responsive">
+								<table class="table table-bordered" style="width: 100%;">
+									<tr>
+										<th>3 Months</th>
+										<th>6 Months</th>
+										<th>12 Months</th>
+										<th style="width: 200px;">Lisiting</th>
+										<th>Action</th>
+									</tr>
+									<tbody>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb1" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb1"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb2" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb2"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb3" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb3"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single2" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb4" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="18,00" data-tg-on="Select" for="cb4"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb5" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,600" data-tg-on="Select" for="cb5"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb6" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="8,000" data-tg-on="Select" for="cb6"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single4" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb7" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb7"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb8" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb8"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb9" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb9"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single3" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							</div>
+							<div class="tab-pane fade" id="homestay" role="tabpanel" aria-labelledby="homestay-tab">
+								<div class="table-responsive">
+								<table class="table table-bordered" style="width: 100%;">
+									<tr>
+										<th>3 Months</th>
+										<th>6 Months</th>
+										<th>12 Months</th>
+										<th style="width: 200px;">Lisiting</th>
+										<th>Action</th>
+									</tr>
+									<tbody>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb1" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb1"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb2" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb2"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb3" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb3"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single2" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb4" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="18,00" data-tg-on="Select" for="cb4"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb5" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,600" data-tg-on="Select" for="cb5"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb6" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="8,000" data-tg-on="Select" for="cb6"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single4" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb7" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb7"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb8" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb8"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb9" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb9"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single3" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							</div>
+							<div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">
+								<div class="table-responsive">
+								<table class="table table-bordered" style="width: 100%;">
+									<tr>
+										<th>Daily</th>
+										<th>Weekly</th>
+										<th>Monthly</th>
+										<th>Yearly</th>
+										<th style="width: 200px;">Lisiting</th>
+										<th>Action</th>
+									</tr>
+									<tbody>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb11" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb11"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb12" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb12"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb111" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb111"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb13" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb13"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single5" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb14" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="18,00" data-tg-on="Select" for="cb14"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb15" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,600" data-tg-on="Select" for="cb15"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb16" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="8,000" data-tg-on="Select" for="cb16"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb222" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb222"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single6" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb17" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb17"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb18" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb18"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb333" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb333"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb19" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb19"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single7" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							</div>
+							<div class="tab-pane fade" id="operator" role="tabpanel" aria-labelledby="operator-tab">
+								<div class="table-responsive">
+								<table class="table table-bordered" style="width: 100%;">
+									<tr>
+										<th>3 Months</th>
+										<th>6 Months</th>
+										<th>12 Months</th>
+										<th style="width: 200px;">Lisiting</th>
+										<th>Action</th>
+									</tr>
+									<tbody>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb1" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb1"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb2" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb2"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb3" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb3"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single2" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb4" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="18,00" data-tg-on="Select" for="cb4"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb5" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,600" data-tg-on="Select" for="cb5"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb6" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="8,000" data-tg-on="Select" for="cb6"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single4" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb7" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="12,00" data-tg-on="Select" for="cb7"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb8" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="3,000" data-tg-on="Select" for="cb8"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<ul class="tg-list">
+													<li class="tg-list-item">
+														<input class="tgl tgl-skewed" id="cb9" type="checkbox" />
+														<label class="tgl-btn" data-tg-off="7,000" data-tg-on="Select" for="cb9"></label>
+													</li>
+												</ul>
+											</td>
+											<td>
+												<select placeholder=" " id="single3" class="js-states form-control">
+													<option disabled selected value></option>
+													<option>Hotel Lisiting</option>
+													<option>Event Lisiting</option>
+													<option>Tour Lisiting</option>
+													<option>HomeStay Lisiting</option>
+												</select>
+											</td>
+											<td>
+												<button class="pay-btn">Pay Now</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+<script>
+	$("#single2").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single3").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single4").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single5").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single6").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single7").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single8").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single9").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single10").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single11").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single12").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single13").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single14").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+	$("#single15").select2({
+          placeholder: "Lisiting",
+          allowClear: true
+      });
+</script>

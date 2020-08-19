@@ -1,0 +1,472 @@
+{% extends "base/base_templates.html" %}
+{% load static %}
+{% block content %}
+
+<div id="wrapper">
+  <div class="bg-one-banner">
+    <div class="detail-banner hidden-md">
+      <h2>The Taj Mahal Palace</h2>
+      <p>Mumbai (India)</p>
+      <!-- <span><i class="fa fa-image"></i>5 Photos</span>
+          &nbsp;&nbsp;<span><i class="fa fa-play"></i>5 Videos</span> -->
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="row mt-20">
+        <div class="col-lg-12 main-head-result">
+          <div class="page-content1" style="padding-left: 15px;">
+            <ul>
+              <li><a href="{{BASE_URL}}">Home</a>
+              </li>
+              <li><a href="#">Homestay in Goa</a>
+              </li>
+              <!-- <li><a href="#">Activity</a></li> -->
+              <li class="active"><a href="#">Homestay Name</a>
+              </li>
+            </ul>
+          </div>
+         <!--  <div class="show-entry"> <span>24 results for <span class="readmore">HomeStay</span></span>
+          </div> -->
+        </div>
+      </div>
+      <div class="start-detail-page mt-20">
+       
+         <div class="start-detail-left">
+          <div class="slider2">
+            <img src="{% static 'images/hotel-detail1.jpg' %}" />
+            <img src="{% static 'images/hotel-detail2.jpg' %}" />
+            <img src="{% static 'images/hotel-detail3.jpg' %}" />
+            <img src="{% static 'images/hotel-detail4.jpg' %}" />
+            <img src="{% static 'images/hotel-detail5.jpg' %}" />
+
+                    </div>
+        
+        </div>
+        <div class="start-detail-center">
+          <div class="center-image">
+            <img src="{% static 'images/hotel-detail3.jpg' %}">
+          </div>
+          <div class="center-div-ads">
+            <div class="ads-left">
+              <img src="{% static 'images/ads.PNG' %}">
+            </div>
+            <div class="map-right">
+              <a href="#" data-toggle="modal" data-target="#myModal"><img src="{% static 'images/map-detail.PNG' %}"></a>
+            </div>
+          </div>
+        </div>
+        <div class="start-detail-right">
+            <div class="detail-facility">
+            <div class="details__header details__header_shadowed">
+              <p class="details__header-text" data-selenium="details__header-text">Quad Room</p>
+              <div class="details__header__badges-discount">SAVE 26% TODAY!</div>
+              <div>
+                <div class="details__header__price-header">Starts from
+                </div>
+                  <div>
+                <span class="details__header__price-currency-first">Rs.</span>
+                <span class="details__header__price-display">1,099 <span class="per-price">/person</span></span>
+                <button class="book-detail-btn">Get Discount</button>
+                  </div>
+                </div>
+              </div>
+                        <div class="details__header details__header_shadowed">
+              <p class="details__header-text" data-selenium="details__header-text">Quad Room</p>
+              <div class="details__header__badges-discount">SAVE 26% TODAY!</div>
+              <div>
+                <div class="details__header__price-header">Starts from
+                </div>
+                  <div>
+                <span class="details__header__price-currency-first">Rs.</span>
+                <span class="details__header__price-display">1,099 <span class="per-price">/person</span></span>
+                <button class="book-detail-btn">Get Discount</button>
+                  </div>
+                </div>
+              </div>
+            <div class="details__header details__header_shadowed"><p class="details__header-text" data-selenium="details__header-text">Single Room</p><div class="details__header__badges-discount">SAVE 32% TODAY!</div><div><div class="details__header__price-header">Starts from</div><div><span class="details__header__price-currency-first">Rs.</span><span class="details__header__price-display">1,799 <span class="per-price">/person</span></span>
+            <button class="book-detail-btn">Get Discount</button></div></div></div>
+<!-- <div class="detail-notes">
+  <label><strong>Notes:</strong></label>
+  <p><i style="margin-right: 5px;" class="fa fa-check"></i>1 kid under 5 years stays <b>FREE!</b></p>
+  <p><i style="margin-right: 5px;" class="fa fa-check"></i>Free Cancellation Available</p>
+  <p><i style="margin-right: 5px;" class="fa fa-check"></i>Pay Nothing Until your Booking</p>
+</div> -->
+
+          </div>  
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col-md-8 p-t-b-20 detail-head">
+        <h2>The Taj Mahal Palace, Mumbai (India)</h2>
+        <a href="{{BASE_URL}}destination_detail"><span class="text-secondary"><img src="{% static 'images/hotel-1.jpg' %}">Apollo Bandar, Colaba, Mumbai, Maharashtra 400001 (India).</span></a>
+      </div>
+      <div class="col-md-4 p-t-b-20">
+        <div class="verified-strip">
+          <div class="left-strip-cont">
+            <span>100%</span>
+            <p>Verified</p>
+          </div>
+          <div class="right-strip-cont">
+            <h6>Book confidently!</h6>
+            <p>Real photos &amp; assured amenities.If you don't get that we'll give you a full refund. T&amp;C's</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row  mb-20">
+        
+        <div class="col-md-12">
+          <h5><b>About The </b></h5>
+         <span>HomeStay Grand Peepal is a modern property with bright and cosy interiors, and located in Balmiki Colony in Karol Bagh, Delhi. It is very close to Regharpura Bus Stop, Karol Bagh Metro Station and Delhi Sarai Rohilla Railway Station. The Karol Bagh Market, Jhandewalan Mata Mandir, Rock Garden and Talkatora Indoor Stadium are close to the property too.</span><span id="dots" class="hidden-sm">...</span>
+            
+          <p id="more"><br>HomeStay Grand Peepal is a modern property with bright and cosy interiors, and located in Balmiki Colony in Karol Bagh, Delhi. It is very close to Regharpura Bus Stop, Karol Bagh Metro Station and Delhi Sarai Rohilla Railway Station. The Karol Bagh Market, Jhandewalan Mata Mandir, Rock Garden and Talkatora Indoor Stadium are close to the property too.</p>
+          <button onclick="myFunction()" id="myBtn" class="hidden-sm">Read more</button>
+        </div>
+        <div class="col-md-12 multi-select-icon mt-20">
+                  <label style="padding: 0;margin: 0; border:none;">
+                    <h5><b>Facilities Offered</b></h5></label>
+                  <ul>
+  <li>
+    <input type="checkbox" id="myCheckbox1">
+    <label for="myCheckbox1"><img src="{% static 'images/air-conditioner.png' %}"><br><span>A.C.</span></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox2">
+    <label for="myCheckbox2"><img src="{% static 'images/internet.png' %}"><br><span>Wi-Fi</span></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox3">
+    <label for="myCheckbox3"><img src="{% static 'images/milk.png' %}"><br><span>Breakfast</span></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox4">
+    <label for="myCheckbox4"><img src="{% static 'images/cctv.png' %}"><br><span>Cctv</span></label>
+  </li>
+  <li>
+    <input type="checkbox" id="myCheckbox5">
+    <label for="myCheckbox5"><img src="{% static 'images/air-conditioner.png' %}"><br><span>A.C.</span></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox6">
+    <label for="myCheckbox6"><img src="{% static 'images/internet.png' %}"><br><span>Wi-Fi</span></label>
+  </li>
+  </ul>
+                </div>
+        
+      </div>
+    </div>
+    
+    <div class="bg-homestay p-t-b-40" style="border-top: 1px solid #ccc;">
+      <div class="container">
+        <div class="slider-hotel">
+              <div class="stay_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/homestays.png' %}">
+                        <!--<i class="fa fa-home"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Home Stays in Goa</h4>
+                    </div>
+                </div>
+                    <!-- <div class="hotel-list-title text-center">
+                        
+                    </div> -->
+                    <div class="slider1">
+                       <a href="#">
+                             <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-1.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Comfortable bedroom in a penthouse at Bandra West</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-2.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Goa</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Beautiful & cozy Studio Apartment at Siolim</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="stay-likehome ">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-3.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Private Studio,open sky terrace close at Airports</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 3500</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                           <div class="stay-likehome ">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-4.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Maharashtra</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Laisha's Home:A cozy private pad</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-1.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Comfortable bedroom in a penthouse at Bandra West</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                    </div>
+                 </div>
+             </div>
+      </div>
+    <div class="reviews">
+      <div class="container">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item"> <a class="nav-link active" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="home" aria-selected="true">Customer Reviews</a>
+            </li>
+            <!-- <li class="nav-item"> <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="profile" aria-selected="false">Map</a>
+              </li> -->
+            <!--  <li class="nav-item"> <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="contact" aria-selected="false">Photos</a>
+              </li>
+               <li class="nav-item"> <a class="nav-link" id="operator-tab" data-toggle="tab" href="#operator" role="tab" aria-controls="contact" aria-selected="false">How to reach</a>
+              </li> -->
+          </ul>
+            <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab" style="padding: 10px;">
+              <div class="review_box">
+                <div class="row customer_review">
+                  <div class="col-md-1">
+                    <div class="review_user">
+                      <img alt="" src="{% static 'images/u.png' %}">
+                    </div>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="rating-stars">
+                      <ul id="stars">
+                        <li class="star" title="Poor" data-value="1"> <i class="fa fa-star fa-fw"></i> 
+                        </li>
+                        <li class="star" title="Fair" data-value="2"> <i class="fa fa-star fa-fw"></i> 
+                        </li>
+                        <li class="star" title="Good" data-value="3"> <i class="fa fa-star fa-fw"></i> 
+                        </li>
+                        <li class="star" title="Excellent" data-value="4"> <i class="fa fa-star fa-fw"></i> 
+                        </li>
+                        <li class="star" title="WOW!!!" data-value="5"> <i class="fa fa-star fa-fw"></i> 
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="review_highlight">Your Rating</p>
+                    <div class="rating_box_view">
+                      <div class="rating_div">
+                        <form action="#" method="post">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="comment" class="form-comm">comment *</label>
+                                <textarea rows="3" required="required" class="form-control"></textarea>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group text-right ">
+                                <button type="submit" class="buttons-action" style="margin: 0;">Submit</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="review_box">
+                <div class="row customer_review">
+                  <div class="col-md-1">
+                    <div class="review_user">
+                      <img alt="" src="{% static 'images/u.png' %}">
+                    </div>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="rating_box_view">
+                      <div class="rating_div">
+                        <h6>Client Name <small>31 Jan 2020</small></h6>
+                        <fieldset> <span class="great">3.0/5</span>
+                          <div class="rating-stars">
+                            <ul id="stars">
+                              <li class="star selected" title="Poor" data-value="1"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Fair" data-value="2"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Good" data-value="3"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Excellent" data-value="4"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star" title="WOW!!!" data-value="5"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                            </ul>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <p>this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</p>
+                    </div>
+                  </div>
+                </div>
+              </div><span id="dots-review" class="hidden-sm">...</span>
+              <div id=more-review>
+              <div class="review_box">
+                <div class="row customer_review">
+                  <div class="col-md-1">
+                    <div class="review_user">
+                      <img alt="" src="{% static 'images/u.png' %}">
+                    </div>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="rating_box_view">
+                      <div class="rating_div">
+                        <h6>Client Name <small>31 Jan 2020</small></h6>
+                        <fieldset> <span class="great">3.0/5</span>
+                          <div class="rating-stars">
+                            <ul id="stars">
+                              <li class="star selected" title="Poor" data-value="1"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Fair" data-value="2"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Good" data-value="3"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Excellent" data-value="4"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star" title="WOW!!!" data-value="5"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                            </ul>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <p>this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="review_box">
+                <div class="row customer_review">
+                  <div class="col-md-1">
+                    <div class="review_user">
+                      <img alt="" src="{% static 'images/u.png' %}">
+                    </div>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="rating_box_view">
+                      <div class="rating_div">
+                        <h6>Client Name <small>31 Jan 2020</small></h6>
+                        <fieldset> <span class="great">3.0/5</span>
+                          <div class="rating-stars">
+                            <ul id="stars">
+                              <li class="star selected" title="Poor" data-value="1"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Fair" data-value="2"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Good" data-value="3"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star selected" title="Excellent" data-value="4"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                              <li class="star" title="WOW!!!" data-value="5"> <i class="fa fa-star fa-fw"></i> 
+                              </li>
+                            </ul>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <p>this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button onclick="myFunction()" id="btn-review" class="hidden-sm">Read more Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+ <!----------------popup--------------------->
+      <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">HomeStay Location</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="map">
+                  <div id="map_container"></div>
+                  <div id="map"></div>
+          
+        </div>
+        
+        <!-- Modal footer -->
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+    <!-------------------------------------------->
+
+{% endblock %}

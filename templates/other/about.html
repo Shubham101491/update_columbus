@@ -1,0 +1,67 @@
+{% extends "base/base_templates.html" %}
+{% load static %}
+{% block content %}
+
+<style type="text/css">
+	
+</style>
+<div id="wrapper">
+	<div class="bg-one-banner" style="background-image: url({% static 'images/icons/background.png' %});">
+	</div>
+	<section class="mt-20 mb-40">
+		<div class="container">
+             <div class="row">
+        <div class="col-lg-12 main-head-result">
+          <div class="page-content1">
+            <ul>
+              <li><a href="{{BASE_URL}}">Home</a>
+              </li>
+              <!-- <li><a href="#">Activity</a></li> -->
+              <li class="active"><a href="#">About</a>
+              </li>
+            </ul>
+          </div>
+         <!--  <div class="show-entry"> <span>24 results for <span class="readmore">HomeStay</span></span>
+          </div> -->
+        </div>
+      </div>
+		<div class="about-one">
+                <div class="text-center tour-head-title pb-10">
+                            <h1>About <span>Us</span></h1>
+                            </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-page-content pt-40">
+                           
+                            <p>Columbus Lost - We help you discover the lost heritage and culture of India, just as Christopher Columbus found the lost continent of America. This is a site on anything Satvic. Satvic means "Wholesome Goodness". So, it covers</p>
+                            <ul>
+                            	<li>Spirituality</li>
+                            	<li>Temples</li>
+                            	<li>Yoga</li>
+                            	<li>Holistic Healing</li>
+                            	<li>Books on Spirituality, Nature etc.</li>
+                            	<li>Mystics,Saints</li>
+                            </ul>
+                            <p>We might also cover some unknown aspects in famous places. The intention is to ensure that this heritage is not lost and we do not overcrowded the famous temples but instead help out these smaller ones.</p>
+                        </div> <!-- about page content -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-page-image mt-20">
+                            <img src="{% static 'images/about2.jpg' %}" alt="about">
+                        </div> <!-- about page image -->
+                    </div>
+                    <div class="col-md-12 mt-20">
+                    	<p>India has enormous potential for tourism. Call it by various names such as spiritual tourism or religious tourism or heritage tourism or mystic tourism or pilgrimage tourism or faith tourism, there is a lot to explore. Unfortunately, there is a total lack of awareness in the general public. There is a need to greatly leverage this potential which will bring growth to this country. Indirectly, we also encourage rural development, infrastructure and the image of India across the world grows.</p><br/>
+
+                    	<h4>How you can help Columbus Lost?</h4>
+                    	<p>If you want to write an article about a temple in your place or something related to our heritage or ancient medicine, please feel to write to us with photographs. If there is an event happening in your area, like a temple renovation, you can provide the details here. This site is to enable non-technical people to blog their thoughts.</p>
+                    	<h4>Disclaimer:</h4>
+                    	<p>We have provided several details like Temple Phone numbers, Priest numbers, google maps, tour operator details etc. However, it is all provided in good faith. We are not responsible for the veracity of the information and any difficulties which may arise.</p>
+                    </div>
+                </div> <!-- row -->
+            </div>
+        </div>
+	</section>
+</div>
+
+{% endblock %}

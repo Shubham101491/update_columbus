@@ -1,0 +1,278 @@
+{% extends "dashboard2_templates.html" %}
+{% load static %}
+{% block content %}
+
+<!----------------COntent start-------------->
+<form action="{{BASE_URL}}my_event/">
+<section id="content-wrapper">
+  <div class="container-fluid">
+    <div class="row p-t-b-20">
+      <div class="col-md-12">
+        <div class="form-card no-b preview">
+          <div class="login-form-card">
+            <!-- <div class="login-form-content"> -->
+              
+            <!-- <form action="javascript:(0);"> -->
+              <form action="{{BASE_URL}}edit/"></form>
+              {% for t in event %}
+              <h2 class="form-title">Event Listing Preview</h2>
+              <div class="form-define-head">
+                <h4><span>step 1</span>Event Name & Address</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="name">Events Name</label>
+                        {{ t.event_name }}
+                        
+                    </div>
+                   <div class="form-group">
+                        <label for="name">Address</label>
+                        {{ t.address }}
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Start Date</label>
+                        
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="name">Destination</label>
+                        {{ t.destination }}
+
+                    </div>
+                  <!-- <div class="col-md-12"> -->
+                     <div class="form-group">
+                        <label for="name">Zip Code</label>
+                        {{ t.zipcode }}
+                        
+                    </div>
+                 <!--  </div> -->
+                <div class="form-group">
+                        <label for="name">End Date</label>
+                        
+                    </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-define-head">
+                <h4><span>step 2</span>About Events, Images & Pricing</h4>
+              </div>
+              <div class="row">
+                
+                <div class="col-md-6">
+                <div class="form-group">
+                        <label for="name">About Event</label>
+                    {{ t.about_event }}
+
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                        <label for="name">Important Notes</label>
+                        {{ t.imp_notes }}
+
+                    </div>
+                </div>
+               
+              </div>
+              <hr>
+              <label for="field" class="font-weight-bold">Upload Images</label>
+              <div class="row">
+                <div class="col-md-12 dynamic-field" id="dynamic-field-1">
+                  <div class="row">
+                  <!--   <div class="col-md-2">
+                      <div class="form-group">
+                        <label for="field">Cover Image</label>
+                          <input type="radio" checked id="field" class="box-control" name="field[]" />
+                        
+                      </div>
+                    </div> -->
+                    <div class="col-md-6">
+                       <div class="form-group">
+                        <label for="name">Image Name</label>
+                        {{ t.image_name }}
+
+                        <label><input type="radio" name="cover" style="margin-right: 7px;">Cover Image</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="{% static 'images/taaj.jpg' %}" class="preview-img" >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 dynamic-field" id="dynamic-field-1">
+                  <div class="row">
+                 <!--    <div class="col-md-2">
+                      <div class="form-group">
+                        <label for="field">Cover Image</label>
+                          <input type="radio" id="field" class="box-control" name="field[]" />
+                        
+                      </div>
+                    </div> -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Image Name</label>
+                       
+                        <label><input type="radio" name="cover" checked style="margin-right: 7px;">Cover Image</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="{% static 'images/room-1.jpg' %}" class="preview-img" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <label for="field" class="font-weight-bold">Cost Per Night</label>
+              <div class="row">
+                <div class="col-md-12 dynamic-input2" id="dynamic-input-2">
+                  <div class="row">
+                  <!--   <div class="col-md-2">
+                      <div class="form-group">
+                        <label for="field">No Cost</label>
+                          <input type="radio" id="field" class="box-control" name="field[]" />
+                        
+                      </div>
+                    </div> -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Cost Per Person</label>
+                        {{ t.cost_pperson }}
+
+                        <label><input type="radio" name="cover" style="margin-right: 7px;">No Cost</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Cost Per Couple</label>
+                        {{ t.cost_pcouple }}
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-define-head">
+                <h4><span>step 3</span>Events Location </h4>
+              </div>
+              <div class="row">
+                 <div class="col-md-6">
+                  <div class="form-group">
+                        <label for="field">Latitude*</label>
+                        {{ t.latitude }} 
+                       
+                      </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="field">Longitude*</label>
+                        {{ t.longitude }}
+                       
+                      </div>
+                </div>
+                <div class="col-md-12">
+                  <div id="map_container"></div>
+                  <div id="map"></div>
+                </div>
+              </div>
+              <div class="row space-center">
+                <div class="col-md-2">
+                  <input type="button" class="buttons-action" value="Go Back" onclick="goBack()" />
+                </div>
+                <div class="col-md-2">
+                  <a href="{{BASE_URL}}my_event">
+                    <input type="button" class="buttons-action" value="Publish Now" />
+                  </a>
+                </div>
+              </div>
+            </form>
+            {% endfor %}
+          </div>
+        </div>
+        <!--  </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+{% endblock %}
+
+<script>
+  $(':radio').change(function() {
+      console.log('New star rating: ' + this.value);
+    });
+</script>
+<script>
+  $(document).ready(function() {
+          var buttonAdd = $("#add-button2");
+          var buttonRemove = $("#remove-button2");
+          var className = ".dynamic-input2";
+          var count = 0;
+          var field = "";
+          var maxFields =50;
+        
+          function totalFields() {
+            return $(className).length;
+          }
+        
+          function addNewField() {
+            count = totalFields() + 1;
+            field = $("#dynamic-input-2").clone();
+            field.attr("id", "dynamic-input-" + count);
+            field.children("label").text("Field " + count);
+            field.find("input").val("");
+            $(className + ":last").after($(field));
+          }
+        
+          function removeLastField() {
+            if (totalFields() > 1) {
+              $(className + ":last").remove();
+            }
+          }
+        
+          function enableButtonRemove() {
+            if (totalFields() === 2) {
+              buttonRemove.removeAttr("disabled");
+              buttonRemove.addClass("shadow-sm");
+            }
+          }
+        
+          function disableButtonRemove() {
+            if (totalFields() === 1) {
+              buttonRemove.attr("disabled", "disabled");
+              buttonRemove.removeClass("shadow-sm");
+            }
+          }
+        
+          function disableButtonAdd() {
+            if (totalFields() === maxFields) {
+              buttonAdd.attr("disabled", "disabled");
+              buttonAdd.removeClass("shadow-sm");
+            }
+          }
+        
+          function enableButtonAdd() {
+            if (totalFields() === (maxFields - 1)) {
+              buttonAdd.removeAttr("disabled");
+              buttonAdd.addClass("shadow-sm");
+            }
+          }
+        
+          buttonAdd.click(function() {
+            addNewField();
+            enableButtonRemove();
+            disableButtonAdd();
+          });
+        
+          buttonRemove.click(function() {
+            removeLastField();
+            disableButtonRemove();
+            enableButtonAdd();
+          });
+        });
+</script>

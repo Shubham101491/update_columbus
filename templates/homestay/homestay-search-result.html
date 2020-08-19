@@ -1,0 +1,336 @@
+{% extends "base/base_templates.html" %}
+{% load static %}
+{% block content %}
+
+<div id="wrapper">
+  <div class="bg-one-banner" style="background-image: url({% static 'images/search1.jpg' %});"></div>
+  <!-- <section class="gravemain">
+    <div class="container">
+        <div class="activity-name-title">
+            <h2>Personas</h2>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <img src="images/events/ev-2.jpg" alt="" class="activity-img">
+            </div>
+            <div class="col-md-8">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+  <section class="fluid-container p-l-r-50 mt-20 mb-40 cat-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 main-head-result">
+          <div class="page-content1">
+            <ul>
+              <li><a href="#">Home</a>
+              </li>
+              <!-- <li><a href="#">Activity</a></li> -->
+              <li class="active"><a href="#">HomeStay</a>
+              </li>
+            </ul>
+          </div>
+          <div class="show-entry"> <span>24 results for <span class="readmore">HomeStay</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 p-t-b-20 detail-head hidden-md">
+          <h2>Search result HomeStay in Goa</h2>
+          <span class="text-secondary"><i class="fa fa-map-marker" style="margin-right: 5px;"></i>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001 (India).</span>
+        </div>
+        <div class="filter-area col-md-3" id="sidebarWrap">
+          <div id="sidebar">
+            <div class="activity-name-title">
+              <h2>Filters By</h2>
+            </div>
+            <div class="filter-section">
+              <div class="accordion-container">
+                <div class="set"> <a href="javascript:void(0)" class="active">
+                  Destination
+                  <i class="fa fa-angle-up"></i> 
+                </a>
+                  <div class="content filter-color style-4">
+                    <select id="single" class="js-states form-control">
+                      <option>Goa</option>
+                      <option>Chennai</option>
+                      <option>Mumbai</option>
+                      <option>Kolkata</option>
+                      <option>Delhi</option>
+                      <option>Madhya Pradesh</option>
+                    </select>
+                    <ul>
+                      <li>
+                        <input type="Checkbox" name id="goa">
+                        <label for="goa"> <span class="fillter-text">Goa</span>
+                          <span class="filter-num">(65)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="delhi">
+                        <label for="delhi"> <span class="fillter-text">Delhi</span>
+                          <span class="filter-num">(25)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="pune">
+                        <label for="pune"> <span class="fillter-text">Pune</span>
+                          <span class="filter-num">(22)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="mumbai">
+                        <label for="mumbai"> <span class="fillter-text">Mumbai</span>
+                          <span class="filter-num">(19)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="haridwar">
+                        <label for="haridwar"> <span class="fillter-text">Haridwar</span>
+                          <span class="filter-num">(15)</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="set" id="defaultOpen"> <a href="javascript:void(0)" class="active">
+                  Facilities
+                  <i class="fa fa-angle-up"></i>
+                </a>
+                  <div class="content filter-alcohol style-4">
+                    <ul>
+                      <li>
+                        <input type="Checkbox" name id="conditioner">
+                        <label for="conditioner"> <span class="fillter-text">A.C</span>
+                          <span class="filter-num">(65)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="Wi-FI">
+                        <label for="Wi-FI"> <span class="fillter-text">Wi-FI</span>
+                          <span class="filter-num">(25)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="Swimming">
+                        <label for="Swimming"> <span class="fillter-text">Swimming Pool</span>
+                          <span class="filter-num">(22)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="Breakfast">
+                        <label for="Breakfast"> <span class="fillter-text">Free Breakfast</span>
+                          <span class="filter-num">(19)</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="Checkbox" name id="vehicle">
+                        <label for="vehicle"> <span class="fillter-text">Vehicle</span>
+                          <span class="filter-num">(15)</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="set"> <a href="javascript:void(0)" class="active">
+                  Price 
+                  <i class="fa fa-angle-up"></i> 
+                </a>
+                  <div class="content">
+                    <div class="container-fluid">
+                      <div class="row mt-20 mb-20">
+                        <div class="col-sm-12">
+                          <div id="slider-range"></div>
+                        </div>
+                      </div>
+                      <div class="row slider-labels">
+                        <div class="col-md-6 caption"> <strong>Min:</strong>  <span id="slider-range-value1"></span>
+                        </div>
+                        <div class="col-md-6 text-right caption"> <strong>Max:</strong>  <span id="slider-range-value2"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/#accordion-->
+            </div>
+          </div>
+        </div>
+        <div class="selling-area col-md-9" id="main">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item sorting-tab">Sort By</li>
+            <li class="nav-item"> <a class="nav-link active" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="home" aria-selected="true">Featured</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" id="homestay-tab" data-toggle="tab" href="#homestay" role="tab" aria-controls="profile" aria-selected="false">Distance</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="contact" aria-selected="false">Pricing</a>
+            </li>
+            <!-- <li class="nav-item"> <a class="nav-link" id="operator-tab" data-toggle="tab" href="#operator" role="tab" aria-controls="contact" aria-selected="false">Tour Operator</a>
+              </li> -->
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
+              <div class="event-main mt-20">
+                <div class="activity-name-title"> <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank"><h2>HomeStay Name, Goa (India)</h2></a>
+                  <div class="row">
+                    <div class="col-md-3 short-img">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank">
+                        <div class="col-md-12">
+                          <img src="{% static 'images/room-2.jpg' %}" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-9">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank" class="content-short-data">
+                        <div class="border-double">
+                          <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001 (India).</p>
+                          <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                          <div class="product_list_review"><span class="readmore">Read More</span>
+                          </div>
+                          <div class="facilities-icon">
+                            <ul>
+                              <li> <i class="fa fa-wifi"></i>Free Wi-fi</li>
+                              <li> <i class="fa fa-product-hunt"></i>Free Parking</li>
+                              <li> <i class="fa fa-cutlery "></i>Resturant</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="veriyent">
+                          <div class=""> <span class="badge badge-danger badge-price">Rs.1,500/<span>Person</span></span>
+                          </div>
+                          <div class=""> <span><b>Destination: </b> Goa </span>
+                          </div>
+                          <button class="buy-btn">Get Discount</button>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="activity-name-title"> <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank"><h2>HomeStay Name, Goa (India)</h2></a>
+                  <div class="row">
+                    <div class="col-md-3 short-img">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank">
+                        <div class="col-md-12">
+                          <img src="{% static 'images/room-2.jpg' %}" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-9">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank" class="content-short-data">
+                        <div class="border-double">
+                          <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001 (India).</p>
+                          <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                          <div class="product_list_review"><span class="readmore">Read More</span>
+                          </div>
+                          <div class="facilities-icon">
+                            <ul>
+                              <li> <i class="fa fa-wifi"></i>Free Wi-fi</li>
+                              <li> <i class="fa fa-product-hunt"></i>Free Parking</li>
+                              <li> <i class="fa fa-cutlery "></i>Resturant</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="veriyent">
+                          <div class=""> <span class="badge badge-danger badge-price">Rs.1,500/<span>Night</span></span>
+                          </div>
+                          <div class=""> <span><b>Destination: </b> Goa </span>
+                          </div>
+                          <button class="buy-btn">Get Discount</button>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="activity-name-title"> <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank"><h2>HomeStay Name, Goa (India)</h2></a>
+                  <div class="row">
+                    <div class="col-md-3 short-img">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank">
+                        <div class="col-md-12">
+                          <img src="{% static 'images/room-2.jpg' %}" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-9">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank" class="content-short-data">
+                        <div class="border-double">
+                          <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001 (India).</p>
+                          <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                          <div class="product_list_review"><span class="readmore">Read More</span>
+                          </div>
+                          <div class="facilities-icon">
+                            <ul>
+                              <li> <i class="fa fa-wifi"></i>Free Wi-fi</li>
+                              <li> <i class="fa fa-product-hunt"></i>Free Parking</li>
+                              <li> <i class="fa fa-cutlery "></i>Resturant</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="veriyent">
+                          <div class=""> <span class="badge badge-danger badge-price">Rs.1,500/<span>Night</span></span>
+                          </div>
+                          <div class=""> <span><b>Destination: </b> Goa </span>
+                          </div>
+                          <button class="buy-btn">Get Discount</button>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="activity-name-title"> <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank"><h2>HomeStay Name, Goa (India)</h2></a>
+                  <div class="row">
+                    <div class="col-md-3 short-img">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank">
+                        <div class="col-md-12">
+                          <img src="{% static 'images/room-2.jpg' %}" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-9">
+                      <a href="{{BASE_URL}}homestay/homestay_detail" target="_blank" class="content-short-data">
+                        <div class="border-double">
+                          <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001 (India).</p>
+                          <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                          <div class="product_list_review"><span class="readmore">Read More</span>
+                          </div>
+                          <div class="facilities-icon">
+                            <ul>
+                              <li> <i class="fa fa-wifi"></i>Free Wi-fi</li>
+                              <li> <i class="fa fa-product-hunt"></i>Free Parking</li>
+                              <li> <i class="fa fa-cutlery "></i>Resturant</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="veriyent">
+                          <div class=""> <span class="badge badge-danger badge-price">Rs.1,500/<span>Person</span></span>
+                          </div>
+                          <div class=""> <span><b>Destination: </b> Goa </span>
+                          </div>
+                          <button class="buy-btn">Get Discount</button>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                 <div class="col-md-6 offset-md-5 pb-30 text-center">
+                  <button class="buttons-action"><a href="#">View More</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+              <div class="tab-pane fade" id="homestay" role="tabpanel" aria-labelledby="homestay-tab">Coming Soon</div>
+              <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">Coming Soon</div>
+            </div>
+            <!-- <div class="selling-section"> --></div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+  </section>
+  </div>
+
+{% endblock %}

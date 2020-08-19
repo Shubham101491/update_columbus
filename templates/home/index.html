@@ -1,0 +1,1449 @@
+{% extends "base/base_templates.html" %}
+{% load static %}
+{% block content %}
+
+    <div id="wrapper">
+        <div class="bg-one bg-one-mobile">
+            <div class="container">
+                <div class="slider-hotel desktop-tour">
+                    <div class="hotel-list-title text-center">
+                        <h1><img src="{% static 'images/icons/hotels.png' %}">&nbsp;&nbsp;HOTELS</h1>
+                    </div>
+                    <div class="slider1">
+                       <a href="{{BASE_URL}}hotel/hotel_detail">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>23%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-1.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Hotel Taj</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Mumbai, Maharashtra</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{{BASE_URL}}hotel/hotel_detail">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>50%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-2.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Hotel Sree Gokulam Residency</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Thrissur, Kerala</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{{BASE_URL}}hotel/hotel_detail">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>34%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-3.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Hotel Windsor</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Chennai</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{{BASE_URL}}hotel/hotel_detail">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>40%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-4.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Nitya Resort</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Calanguate , Goa</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{{BASE_URL}}hotel/hotel_detail">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>49%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/baudhdev.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-category-icon mobile-tour">
+                    <ul>
+                     <li><a href="{{BASE_URL}}hotel">
+                        <div class="banner-category-div">
+                           <div class="banner-category-img">
+                        <img src="https://img.icons8.com/clouds/100/000000/4-star-hotel.png"/>
+                           </div>
+                           <div class="banner-category-cont">
+                            <h5>Hotel</h5>
+                           </div>
+                        </div>
+                    </a></li>
+                    <li><a href="{{BASE_URL}}homestay/homestay_result">
+                        <div class="banner-category-div">
+                           <div class="banner-category-img">
+                        <img src="https://img.icons8.com/bubbles/100/000000/home.png"/>
+                           </div>
+                           <div class="banner-category-cont">
+                            <h5>HomeStay</h5>
+                           </div>
+                        </div>
+                    </a></li>
+                     <li><a href="{{BASE_URL}}event/event_result">
+                        <div class="banner-category-div">
+                           <div class="banner-category-img" style="padding: 30px;">
+                        <img src="https://img.icons8.com/doodle/50/000000/planner.png"/>
+                           </div>
+                           <div class="banner-category-cont">
+                            <h5>Event</h5>
+                           </div>
+                        </div>
+                    </a></li>
+                     <li><a href="{{BASE_URL}}destination/destination_result">
+                        <div class="banner-category-div">
+                           <div class="banner-category-img" style="padding: 30px;">
+                        <img src="https://img.icons8.com/office/50/000000/worldwide-location.png"/>
+                           </div>
+                           <div class="banner-category-cont">
+                            <h5>Destination</h5>
+                           </div>
+                        </div>
+                    </a></li>
+                     <li style="width: auto;"><a href="{{BASE_URL}}tour/travel_result">
+                        <div class="banner-category-div">
+                           <div class="banner-category-img">
+                        <img src="https://img.icons8.com/clouds/80/000000/travel-book.png"/>
+                           </div>
+                           <div class="banner-category-cont">
+                            <h5>Tour Operator</h5>
+                           </div>
+                        </div>
+                    </a></li>
+                </ul>
+                </div>
+            </div>
+        </div>    
+        <div class="theme-slide">
+            <div class="container">
+                <div class="slick-header">
+                    <h1>EXPLORE DESTINATION BY THEME</h1>
+                </div>
+                <div class="slider">
+                    <a href="{{BASE_URL}}destination/destination_result">
+                    <div class="slick-card">
+                        <img src="{% static 'images/icons/family.png' %}">
+                        <h4>Family</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a>
+                <a href="{{BASE_URL}}destination/destination_result">
+                    <div class="slick-card">
+                        <img src="{% static 'images/icons/honeymoon.png' %}">
+                        <h4>HoneyMoon</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a>
+                <a href="{{BASE_URL}}destination/destination_result">
+                    <div class="slick-card">
+                        <img src="{% static 'images/icons/friends.png' %}">
+                        <h4>Friends/Groups</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a>
+                <a href="{{BASE_URL}}destination/destination_result">
+                    <div class="slick-card">
+                        <img src="{% static 'images/icons/nature.png' %}">
+                        <h4>Nature</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a>
+                <a href="{{BASE_URL}}destination/destination_result">
+                    <div class="slick-card">
+                        <img src="{% static 'images/icons/wellness.png' %}">
+                        <h4>Wellness</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a>
+                <a href="{{BASE_URL}}destination/destination_result">
+                    <div class="slick-card">
+                        <img src="{% static 'images/icons/adventure.png' %}">
+                        <h4>Adventure</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a>
+              <!--   <a href="destination-search-result.php">
+                    <div class="slick-card">
+                        <img src="images/icons/honeymoon.png">
+                        <h4>HoneyMoon</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a> -->
+                <!-- <a href="destination-search-result.php">
+                    <div class="slick-card">
+                        <img src="images/icons/honeymoon.png">
+                        <h4>HoneyMoon</h4>
+                        <p>100+ destination</p>
+                    </div>
+                </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="tour-image" class="desktop-tour">
+        <div class="tour-operation">
+            <div class="container">
+                <div class="tour-head text-center">
+                    <div class="tour-head-title">
+                        <h1>Tour Operators</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <a href="{{BASE_URL}}tour/travel_result">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-1.png' %}">
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <a href="{{BASE_URL}}tour/travel_result">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-2.png' %}">
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <a href="{{BASE_URL}}tour/travel_result">
+                        <div class=" operation">
+                            <img src="{% static 'images/icons/circle-3.png' %}">
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <a href="{{BASE_URL}}tour/travel_result">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-4.png' %}">
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <a href="{{BASE_URL}}tour/travel_result">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-5.png' %}">
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <div class="bg-travel p-t-b-40 mobile-tour">
+      <div class="container">
+        <div class="slider-hotel">
+              <div class="stay_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/events.png' %}">
+                        <!--<i class="fa fa-home"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Tour Operators</h4>
+                    </div>
+                </div>
+                    <!-- <div class="hotel-list-title text-center">
+                        
+                    </div> -->
+                    <div class="mobile-slider1">
+                       <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-1.png' %}">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-1.png' %}">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-2.png' %}">
+                        </div>
+                    </a>
+                        <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-3.png' %}">
+                        </div>
+                    </a>
+                         <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-4.png' %}">
+                        </div>
+                    </a>
+                         <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-5.png' %}">
+                        </div>
+                    </a>
+                         <a href="#">
+                        <div class="operation">
+                            <img src="{% static 'images/icons/circle-1.png' %}">
+                        </div>
+                    </a>
+                    </div>
+                 </div>
+             </div>
+      </div>
+<div class="bg-hotel p-t-b-40 mobile-tour" style="background-image: url({% static 'images/icons/bg-5.png' %});">
+        <div class="container">
+            <div class="slider-hotel">
+                    <div class="stay_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/hotels.png' %}">
+                        <!--<i class="fa fa-home"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Hotels</h4>
+                    </div>
+                </div>
+                    <!-- <div class="hotel-list-title text-center">
+                        
+                    </div> -->
+                    <div class="slider1">
+                       <a href="#">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>23%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-1.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Hotel Taj</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Mumbai, Maharashtra</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>50%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-2.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Hotel Sree Gokulam Residency</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Thrissur, Kerala</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>34%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-3.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Hotel Windsor</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Chennai</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>40%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/icons/hotel-4.png' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Nitya Resort</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Calanguate , Goa</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="hotel-card">
+                                <div class="hotel-offer">
+                                    <p><small>49%&nbsp;<span>OFF</span></small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/baudhdev.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="hotel-name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-net">
+                                        <div class="cancel-net">
+                                            <i class="fa fa-check"></i><span>Free Cancellation</span>
+                                        </div>
+                                        <div class="hotel-wifi">
+                                            <i class="fa fa-wifi"></i><span>Wifi</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="hotel-review">
+                                        <div class="hotel-star">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="review-count">
+                                            <span>332 reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    <section class="desktop-tour">
+        <div class="stay-sect">
+            <div class="container">
+                <div class="stay_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/homestays.png' %}">
+                        <!--<i class="fa fa-home"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Home Stays</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}homestay/homestay_detail">
+                            <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-1.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Comfortable bedroom in a penthouse at Bandra West</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}homestay/homestay_detail">
+                            <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-2.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Goa</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Beautiful & cozy Studio Apartment at Siolim</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}homestay/homestay_detail">
+                            <div class="stay-likehome ">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-3.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Private Studio,open sky terrace close at Airports</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 3500</strong> /night</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}homestay/homestay_detail">
+                            <div class="stay-likehome ">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-4.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Maharashtra</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Laisha's Home:A cozy private pad</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="view"><a href="#">View All...</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-homestay p-t-b-40 mobile-tour" style="background-image: url({% static 'images/icons/bg-2.png' %});">
+        <div class="container">
+            <div class="slider-hotel">
+                    <div class="stay_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/homestays.png' %}">
+                        <!--<i class="fa fa-home"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Home Stays</h4>
+                    </div>
+                </div>
+                    <!-- <div class="hotel-list-title text-center">
+                        
+                    </div> -->
+                    <div class="slider1">
+                       <a href="#">
+                             <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-1.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Comfortable bedroom in a penthouse at Bandra West</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-2.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Goa</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Beautiful & cozy Studio Apartment at Siolim</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="stay-likehome ">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-3.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Private Studio,open sky terrace close at Airports</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 3500</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                           <div class="stay-likehome ">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-4.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Maharashtra</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Laisha's Home:A cozy private pad</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="stay-likehome">
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/room-1.jpg' %}">
+                                </div>
+                                <div class="card-title">
+                                    <div class="city">
+                                        <h5>Mumbai</h5>
+                                    </div>
+                                    <div><span class="rating"><i class="fa fa-star checked"></i> 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-para">
+                                    <p>Comfortable bedroom in a penthouse at Bandra West</p>
+                                </div>
+                                <div class="rate"></div> <span class="hotel_rate"><strong>Rs. 1599</strong> /night</span>
+                            </div>
+                        </a>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    <section class="desktop-tour">
+        <div class="event-sect">
+            <div class="container">
+                <div class="event_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/events.png' %}">
+                        <!--<i class="fa fa-calendar"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Events</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}event/event_detail">
+                            <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/baudhdev.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}event/event_detail">
+                            <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/temple1.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Puri Jagannath Rath Yatra</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Odisha, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}event/event_detail">
+                            <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/budh.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{BASE_URL}}event/event_detail">
+                            <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/temple1.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Puri Jagannath Rath Yatra</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Odisha, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="view"><a href="#">View All...</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <div class="bg-event p-t-b-40 mobile-tour" style="background-image: url({% static 'images/icons/bg-5.png' %});">
+        <div class="container">
+            <div class="slider-hotel">
+                    <div class="stay_sect_head">
+                    <div class="icon">
+                        <img src="{% static 'images/icons/events.png' %}">
+                        <!--<i class="fa fa-home"></i>-->
+                    </div>
+                    <div class="title">
+                        <h4>Events</h4>
+                    </div>
+                </div>
+                    <!-- <div class="hotel-list-title text-center">
+                        
+                    </div> -->
+                    <div class="slider1">
+                       <a href="#">
+                           <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/baudhdev.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                             <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/temple1.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Puri Jagannath Rath Yatra</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Odisha, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                           <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/budh.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/temple1.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Puri Jagannath Rath Yatra</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Odisha, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="event-likehome">
+                                <div class="event-date">
+                                    <p><small>Starting from APR 05</small>
+                                    </p>
+                                </div>
+                                <div class="card-img text-center">
+                                    <img src="{% static 'images/baudhdev.jpg' %}">
+                                </div>
+                                <div class="circle">
+                                    <div class="content">
+                                        <h6><small>Starting Price</small></h6>
+                                        <h6>Rs.2499</h6>
+                                    </div>
+                                </div>
+                                <!--<div><span class="price-rate"><small>starting price</small></span>
+                                    <span class="rate"><small>Rs.2499</small></span>
+                                </div>-->
+                                <div class="card-body">
+                                    <div class="temple_name">
+                                        <h4>Paryushana Parva</h4>
+                                    </div>
+                                    <div class="city_map">
+                                        <div class="map-icon"><i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="city">
+                                            <p>Madhya Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    <section>
+        <div class="travel">
+            <div class="container">
+                <div class="row working-div">
+                    <div class="col-md-4">
+                        <div class="travel-info">
+                            <div class="info-1">
+                                <h2>how it works</h2>
+                            </div>
+                            <div class="info-2">
+                                <h2>start your amazing</h2>
+                            </div>
+                            <div class="info-3">
+                                <h1>travel journey</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4 wd-32">
+                                <div class="destination">
+                                    <div class="dest-img">
+                                        <img src="{% static 'images/icons/destination.png' %}">
+                                    </div>
+                                    <a href="#">
+                                        <div class="dest-info">
+                                            <h5>search your<br><strong>destination</strong></h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 wd-32">
+                                <div class="destination">
+                                    <div class="dest-img">
+                                        <img src="{% static 'images/icons/pacakage.png' %}">
+                                    </div>
+                                    <a href="#">
+                                        <div class="dest-info">
+                                            <h5>search your<br><strong>package</strong></h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 wd-32">
+                                <div class="destination">
+                                    <div class="dest-img">
+                                        <img src="{% static 'images/icons/enjoy.png' %}">
+                                    </div>
+                                    <a href="#">
+                                        <div class="dest-info">
+                                            <h5>get set<br><strong>enjoy!!!</strong></h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about_sect">
+            <div class="container">
+                <div class="row working-div-about">
+                    <div class="col-md-6">
+                        <div class="sect-1">
+                            <div class="about-title">
+                                <h1><strong>About</strong> Us</h1>
+                            </div>
+                            <div class="about-logo">
+                                <img src="{% static 'images/icons/logo-color.png' %}">
+                            </div>
+                            <div class="about-para">ColumbusLost - We help you discover the lost heritage and culture of india,just as christopher columbus found the lost continent of America.This is a site on anything Satvic.Satvic means "Wholesome Goodness". So, It covers</div>
+                            <div class="about-btn">
+                                <button type="button" class="btn btn-primary knw-more"><a href="{{BASE_URL}}about">Know more</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 hidden-md">
+                        <div class="sect-2">
+                            <img src="{% static 'images/icons/aboutus.png' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="container-fluid">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3 active">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-1.png" alt="slide 1">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-2.png" alt="slide 2">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-3.png" alt="slide 3">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-4.png" alt="slide 4">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-1.png" alt="slide 5">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-2.png" alt="slide 6">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-3.png" alt="slide 7">
+            </div>
+            <div class="carousel-item col-md-3">
+                <img class="img-fluid mx-auto d-block" src="images/icons/hotel-4.png" alt="slide 7">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+        </section> -->
+  
+{% endblock %}

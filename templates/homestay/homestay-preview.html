@@ -1,0 +1,288 @@
+{% extends "dashboard2_templates.html" %}
+{% load static %}
+{% block content %}
+
+<!----------------COntent start-------------->
+<section id="content-wrapper">
+  <div class="container-fluid">
+    <div class="row p-t-b-20">
+      <div class="col-md-12">
+        <div class="form-card no-b preview">
+          <div class="login-form-card">
+            <!-- <div class="login-form-content"> -->
+            <!-- <form action="javascript:(0);"> -->
+
+              <form action="{{BASE_URL}}home_edit/">
+                {% for t in home %}
+              <h2 class="form-title">HomeStay Listing Preview</h2>
+              <div class="form-define-head">
+                <h4><span>step 1</span>HomeStay Name & Address</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="name">HomeStay Name</label>
+                        {{ t.home_name }}
+
+                    </div>
+                   <div class="form-group">
+                        <label for="name">Address</label>
+                        {{ t.address }}
+
+                    </div>
+                  
+                </div>
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="name">Destination</label>
+                        {{ t.destination }}
+
+                    </div>
+                  <!-- <div class="col-md-12"> -->
+                     <div class="form-group">
+                        <label for="name">Zip Code</label>
+                        {{ t.zipcode }}
+
+                    </div>
+                 <!--  </div> -->
+                
+                </div>
+              </div>
+              <hr>
+              <div class="form-define-head">
+                <h4><span>step 2</span>About HomeStay, Images & Pricing</h4>
+              </div>
+              <div class="row">
+                <div class="col-md-12 multi-select-icon">
+                  <label style="padding: 0;margin: 0; border:none;">Facilities offered</label>
+                  <ul>
+ <!--  <li>
+    <input type="checkbox" id="myCheckbox1" />
+    <label for="myCheckbox1"><img src="images/air-conditioner.png" /><span>A.C.</span></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox2" />
+    <label for="myCheckbox2"><img src="images/internet.png" /><span>Wi-Fi</span></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox3" />
+    <label for="myCheckbox3"><img src="images/milk.png" /><span>Breakfast</span></label>
+  </li> -->
+  <li>
+
+   <!--  <input type="checkbox" id="myCheckbox4" /> -->
+    <label for="myCheckbox4"><img src="{% static 'images/cctv.png' %}" /><span>Cctv</span></label>
+  </li>
+  <li>
+    <!-- <input type="checkbox" id="myCheckbox5" /> -->
+    <label for="myCheckbox5"><img src="{% static 'images/air-conditioner.png' %}" /><span>A.C.</span></label>
+  </li>
+  <li>
+
+   <!--  <input type="checkbox" id="myCheckbox6" /> -->
+    <label for="myCheckbox6"><img src="{% static 'images/internet.png' %}" /><span>Wi-Fi</span></label>
+  </li>
+  
+</ul>
+                </div>
+                <div class="col-md-12">
+                <div class="form-group">
+                        <label for="name">About</label>
+                        {{ t.about_homestay }}
+                    
+                </div>
+                </div>
+               
+              </div>
+              <hr>
+              <label for="field" class="font-weight-bold">Upload Images</label>
+              <div class="row">
+                <div class="col-md-12 dynamic-field" id="dynamic-field-1">
+                  <div class="row">
+                   <!--  <div class="col-md-2">
+                      <div class="form-group">
+                        <label for="field">Cover Image</label>
+                          <input type="radio" checked id="field" class="box-control" name="field[]" />
+                        
+                      </div>
+                    </div> -->
+                    <div class="col-md-6">
+                       <div class="form-group">
+                        <label for="name">Image Name</label>
+
+                        <label><input type="radio" name="cover" checked style="margin-right: 7px;">Cover Image</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="{% static 'images/room-2.jpg' %}" class="preview-img" >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 dynamic-field" id="dynamic-field-1">
+                  <div class="row">
+                   <!--  <div class="col-md-2">
+                      <div class="form-group">
+                        <label for="field">Cover Image</label>
+                          <input type="radio" id="field" class="box-control" name="field[]" />
+                        
+                      </div>
+                    </div> -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Image Name</label>
+                        {{ t.image_name }}
+
+                        <label><input type="radio" name="cover" style="margin-right: 7px;">Cover Image</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="{% static 'images/room-1.jpg' %}" class="preview-img" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <label for="field" class="font-weight-bold">Cost Per Night</label>
+              <div class="row">
+                <div class="col-md-12 dynamic-input2" id="dynamic-input-2">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Cost Per Person</label>
+                        {{ t.cost_pperson }}
+
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Cost Per Night</label>
+                        {{ t.cost_pnight }}
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-define-head">
+                <h4><span>step 3</span>HomeStay Location </h4>
+              </div>
+              <div class="row">
+                 <div class="col-md-6">
+                  <div class="form-group">
+                        <label for="field">Latitude*</label>
+                        {{ t.latitude }}
+                       
+                      </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="field">Longitude*</label>
+                        {{ t.longitude }}
+                       
+                      </div>
+                </div>
+                <div class="col-md-12">
+                  <div id="map_container"></div>
+                  <div id="map"></div>
+                </div>
+              </div>
+              <div class="row space-center">
+                <div class="col-md-2">
+                  <input type="button" class="buttons-action" value="Go Back" onclick="goBack()" />
+                </div>
+                <div class="col-md-2">
+                  <a href="{{BASE_URL}}my_homestay">
+                    <input type="button" class="buttons-action" value="Publish Now" />
+                  </a>
+                </div>
+              </div>
+            </form>
+            {% endfor %}
+          </div>
+        </div>
+        <!--  </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+{% endblock %}
+
+<script>
+  $(':radio').change(function() {
+      console.log('New star rating: ' + this.value);
+    });
+</script>
+<script>
+  $(document).ready(function() {
+          var buttonAdd = $("#add-button2");
+          var buttonRemove = $("#remove-button2");
+          var className = ".dynamic-input2";
+          var count = 0;
+          var field = "";
+          var maxFields =50;
+        
+          function totalFields() {
+            return $(className).length;
+          }
+        
+          function addNewField() {
+            count = totalFields() + 1;
+            field = $("#dynamic-input-2").clone();
+            field.attr("id", "dynamic-input-" + count);
+            field.children("label").text("Field " + count);
+            field.find("input").val("");
+            $(className + ":last").after($(field));
+          }
+        
+          function removeLastField() {
+            if (totalFields() > 1) {
+              $(className + ":last").remove();
+            }
+          }
+        
+          function enableButtonRemove() {
+            if (totalFields() === 2) {
+              buttonRemove.removeAttr("disabled");
+              buttonRemove.addClass("shadow-sm");
+            }
+          }
+        
+          function disableButtonRemove() {
+            if (totalFields() === 1) {
+              buttonRemove.attr("disabled", "disabled");
+              buttonRemove.removeClass("shadow-sm");
+            }
+          }
+        
+          function disableButtonAdd() {
+            if (totalFields() === maxFields) {
+              buttonAdd.attr("disabled", "disabled");
+              buttonAdd.removeClass("shadow-sm");
+            }
+          }
+        
+          function enableButtonAdd() {
+            if (totalFields() === (maxFields - 1)) {
+              buttonAdd.removeAttr("disabled");
+              buttonAdd.addClass("shadow-sm");
+            }
+          }
+        
+          buttonAdd.click(function() {
+            addNewField();
+            enableButtonRemove();
+            disableButtonAdd();
+          });
+        
+          buttonRemove.click(function() {
+            removeLastField();
+            disableButtonRemove();
+            enableButtonAdd();
+          });
+        });
+</script>

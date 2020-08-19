@@ -1,0 +1,341 @@
+{% extends "base/base_templates.html" %}
+{% load static %}
+{% block content %}
+
+<div id="wrapper">
+ <div class="bg-one-banner" style="background-image: url({% static 'images/search1.jpg' %});">
+  
+  </div>
+  <!-- <section class="gravemain">
+    <div class="container">
+        <div class="activity-name-title">
+            <h2>Personas</h2>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <img src="images/events/ev-2.jpg" alt="" class="activity-img">
+            </div>
+            <div class="col-md-8">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+  <section class="fluid-container p-l-r-50 mt-20 mb-40 cat-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 main-head-result">
+          <div class="page-content1">
+            <ul>
+              <li><a href="#">Home</a>
+              </li>
+              <!-- <li><a href="#">Activity</a></li> -->
+              <li class="active"><a href="#">Destination</a>
+              </li>
+            </ul>
+          </div>
+          <div class="show-entry"> <span>24 results for <span class="readmore">Destination</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 p-t-b-20 detail-head hidden-md">
+          <h2>Search result for Destination Mumbai, (India) as Wellness</h2>
+          <span class="text-secondary"><i class="fa fa-map-marker" style="margin-right: 5px;"></i>Near Station Road Apollo Bandar, Colaba,  Goa (India)</span>
+        </div>
+        <div class="filter-area col-md-3" id="sidebarWrap">
+                      <div id="sidebar">
+                        <div class="activity-name-title">
+                          <h2>Filters By</h2>
+                        </div>
+                        <div class="filter-section">
+                          <div class="accordion-container">
+
+                            <div class="set" id="defaultOpen"> <a href="javascript:void(0)" class="active">
+                  Categories 
+                  <i class="fa fa-angle-up"></i>
+                </a>
+                              <div class="content filter-alcohol style-4">
+                                <ul>
+                                  <li>
+                                    <input type="Checkbox" name id="conditioner">
+                                    <label for="conditioner"> <span class="fillter-text">Family</span>
+                                      <span class="filter-num">(65)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="Wi-FI">
+                                    <label for="Wi-FI"> <span class="fillter-text">HoneyMoon</span>
+                                      <span class="filter-num">(25)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="Swimming">
+                                    <label for="Swimming"> <span class="fillter-text">Friends</span>
+                                      <span class="filter-num">(22)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="Breakfast">
+                                    <label for="Breakfast"> <span class="fillter-text">Nature</span>
+                                      <span class="filter-num">(19)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="wellness">
+                                    <label for="wellness"> <span class="fillter-text">Wellness</span>
+                                      <span class="filter-num">(19)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="adventure">
+                                    <label for="adventure"> <span class="fillter-text">Adventure</span>
+                                      <span class="filter-num">(19)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="vehicle">
+                                    <label for="vehicle"> <span class="fillter-text">Vehicle</span>
+                                      <span class="filter-num">(15)</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                             <div class="set"> <a href="javascript:void(0)" class="active">
+                                Destination
+                                <i class="fa fa-angle-up"></i> 
+                              </a>
+                              <div class="content filter-color style-4">
+                                <select id="single" class="js-states form-control">
+                                  <option>Goa</option>
+                                  <option>Chennai</option>
+                                  <option>Mumbai</option>
+                                  <option>Kolkata</option>
+                                  <option>Delhi</option>
+                                  <option>Madhya Pradesh</option>
+                                </select>
+                                  <ul>
+                                  <li>
+                                    <input type="Checkbox" name id="goa">
+                                    <label for="goa"> <span class="fillter-text">Goa</span>
+                                      <span class="filter-num">(65)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="delhi">
+                                    <label for="delhi"> <span class="fillter-text">Delhi</span>
+                                      <span class="filter-num">(25)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="pune">
+                                    <label for="pune"> <span class="fillter-text">Pune</span>
+                                      <span class="filter-num">(22)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="mumbai">
+                                    <label for="mumbai"> <span class="fillter-text">Mumbai</span>
+                                      <span class="filter-num">(19)</span>
+                                    </label>
+                                  </li>
+                                  <li>
+                                    <input type="Checkbox" name id="haridwar">
+                                    <label for="haridwar"> <span class="fillter-text">Haridwar</span>
+                                      <span class="filter-num">(15)</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                           
+                          </div>
+                          <!--/#accordion-->
+            </div>
+          </div>
+        </div>
+        <div class="selling-area col-md-9" id="main">
+               <hr>
+          <div class="event-main mt-20">
+            <div class="activity-name-title"> <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><h2>Destination Name,(India)</h2></a>
+              <div class="row">
+                <div class="col-md-3 short-img text-center">
+                  
+                    <div class="col-md-12">
+                      <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><img src="{% static 'images/self/download.jpg' %}" /></a>
+                    </div>
+                </div>
+                <div class="col-md-9 content-short-data">
+              
+                    <div class="border-double">
+                      <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                      <div class="product_list_review"><span class="readmore">Read More</span>
+                        
+                      </div>
+
+                    </div>
+                      <div class="veriyent">
+                            <div class="">
+                              <a href="{{BASE_URL}}hotel/hotel_result"><span><i class="fa fa-home mr-5"></i><b>Hotel: </b>  70</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}hotel/hotel_result"><span><i class="fa fa-bed mr-5"></i><b>HomeStay: </b>  40</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}event/event_result"><span><i class="fa fa-calendar mr-5"></i><b>Event: </b>  12</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}travel/travel_result"><span><i class="fa fa-tripadvisor mr-5"></i><b>Tour Operator: </b>  40</span></a>
+                            </div>
+                            <button class="buy-btn">Book Now</button>
+                          
+                      </div>
+                    
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <hr>
+             <div class="activity-name-title"> <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><h2>Destination Name,(India)</h2></a>
+              <div class="row">
+                <div class="col-md-3 short-img text-center">
+                  
+                    <div class="col-md-12">
+                      <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><img src="{% static 'images/room-2.jpg' %}" /></a>
+                    </div>
+                </div>
+                <div class="col-md-9 content-short-data">
+              
+                    <div class="border-double">
+                      <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                      <div class="product_list_review"><span class="readmore">Read More</span>
+                        
+                      </div>
+
+                    </div>
+                      <div class="veriyent">
+                        
+                            <div class="">
+                              <a href="{{BASE_URL}}hotel/hotel_result"><span><i class="fa fa-home mr-5"></i><b>Hotel: </b>  70</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}homestay/homestay_result"><span><i class="fa fa-bed mr-5"></i><b>HomeStay: </b>  40</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}event/event_result"><span><i class="fa fa-calendar mr-5"></i><b>Event: </b>  12</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}travel/travel_result"><span><i class="fa fa-tripadvisor mr-5"></i><b>Tour Operator: </b>  40</span></a>
+                            </div>
+                            <button class="buy-btn">Book Now</button>
+                          
+                      </div>
+                    
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <hr>
+             <div class="activity-name-title"> <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><h2>Destination Name,(India)</h2></a>
+              <div class="row">
+                <div class="col-md-3 short-img text-center">
+                  
+                    <div class="col-md-12">
+                      <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><img src="{% static 'images/room-2.jpg' %}" /></a>
+                    </div>
+                </div>
+                <div class="col-md-9 content-short-data">
+              
+                    <div class="border-double">
+                      <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                      <div class="product_list_review"><span class="readmore">Read More</span>
+                        
+                      </div>
+
+                    </div>
+                      <div class="veriyent">
+                        
+                            <div class="">
+                              <a href="{{BASE_URL}}hotel/hotel_result"><span><i class="fa fa-home mr-5"></i><b>Hotel: </b>  70</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}homestay/homestay_result"><span><i class="fa fa-bed mr-5"></i><b>HomeStay: </b>  40</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}event/event_result"><span><i class="fa fa-calendar mr-5"></i><b>Event: </b>  12</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}travel/travel_result"><span><i class="fa fa-tripadvisor mr-5"></i><b>Tour Operator: </b>  40</span></a>
+                            </div>
+                            <button class="buy-btn">Book Now</button>
+                          
+                      </div>
+                    
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <hr>
+             <div class="activity-name-title"> <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><h2>Destination Name,(India)</h2></a>
+              <div class="row">
+                <div class="col-md-3 short-img text-center">
+                  
+                    <div class="col-md-12">
+                      <a href="{{BASE_URL}}destination/destination_detail" target="_blank"><img src="{% static 'images/room-2.jpg' %}" /></a>
+                    </div>
+                </div>
+                <div class="col-md-9 content-short-data">
+              
+                    <div class="border-double">
+                      <div class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                      <div class="product_list_review"><span class="readmore">Read More</span>
+                        
+                      </div>
+
+                    </div>
+                      <div class="veriyent">
+                        
+                            <div class="">
+                              <a href="{{BASE_URL}}hotel/hotel_result"><span><i class="fa fa-home mr-5"></i><b>Hotel: </b>  70</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}homestay/homestay_result"><span><i class="fa fa-bed mr-5"></i><b>HomeStay: </b>  40</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}event/event_result"><span><i class="fa fa-calendar mr-5"></i><b>Event: </b>  12</span></a>
+                            </div>
+                            <div class="">
+                             <a href="{{BASE_URL}}travel/travel_result"><span><i class="fa fa-tripadvisor mr-5"></i><b>Tour Operator: </b>  40</span></a>
+                            </div>
+                            <button class="buy-btn">Book Now</button>
+                          
+                      </div>
+                    
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <!-- <hr> -->
+           
+            <div class="col-md-6 offset-md-5 pb-30 text-center">
+              <button class="buttons-action text-center"><a href="#">View More</a>
+              </button>
+            </div>
+          </div>
+             
+            </div>
+          <!-- <div class="selling-section"> -->
+          
+        </div>
+      </div>
+  
+    <div class="clearfix"></div>
+  </section>
+</div>
+
+{% endblock %}

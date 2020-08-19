@@ -1,0 +1,331 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Columbus Lost|Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+</head>
+
+<body>
+
+  <section class="user">
+    <div class="user_options-container">
+      <div class="user_options-text">
+        <div class="user_options-unregistered">
+          <h2 class="user_unregistered-title">Don't have an account?</h2>
+          <p class="user_unregistered-text">This is a site on anything Satvic.Satvic means "Wholesome Goodness".</p>
+          <button class="user_unregistered-signup" id="signup-button">Register</button>
+        </div>
+        <div class="user_options-registered">
+          <h2 class="user_registered-title">Have an account?</h2>
+          <p class="user_registered-text">This is a site on anything Satvic.Satvic means "Wholesome Goodness".</p>
+          <button class="user_registered-login" id="login-button">Login</button>
+        </div>
+      </div>
+      <div class="user_options-forms" id="user_options-forms">
+        <div class="user_forms-login">
+          <!-- <div class="text-center">
+        <img src="images/icons/logo-color.png">
+         </div> -->
+          <h2 class="forms_title">Login</h2>
+
+          {% for message in messages %}
+              <h4>{{message}}</h4>
+          {% endfor %}
+          <form class="forms_form" method="POST" action="http://127.0.0.1:8000/account/userlogin/" >
+            {% csrf_token %}
+            
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" placeholder="Email" name='email' class="forms_field-input" required autofocus />
+              </div>
+              <!-- <div class="forms_field">
+                <input type="password" placeholder="Password" name='password' class="forms_field-input" required autofocus />
+              </div> -->
+              <!-- <div class="input-group mb-3">
+                    <div class="g-recaptcha" data-sitekey="6LdncKsZAAAAAFrDUln37zRpzQNo4Oii2Pngf-Xl"></div>
+              </div> -->
+              <div class="row mt-20">
+                <div class="col-md-6">
+                  <div class="forms_field">
+                  </div>
+                </div>
+                  <div class="col-md-6">
+                    <div class="forms_field">
+                      <fieldset>
+                        <!-- <span id="SuccessMessage" class="success">Hurray! Your have successfully entered the captcha.</span> -->
+                        <!-- <span id="WrongCaptchaError" class="error"></span> -->
+                        <div class='CaptchaWrap'>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="submit" class="buttons-action">LOG IN</button>
+              <!-- <a href="{{BASE_URL}}login_otp">
+                <input type="button" value="Log In" class="forms_buttons-action"> -->
+              </a>
+            </div>
+            <div class="forget-div">
+              <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+            </div>
+          </form>
+          </div>
+          <div class="user_forms-signup">
+            <h2 class="forms_title">Registration</h2>
+            <form class="forms_form" method="POST" >
+              {% csrf_token %}
+              <fieldset class="forms_fieldset">
+                <div class="forms_field">
+                  <input type="text" placeholder="Full Name" required="required" name='fullname' class="forms_field-input"/>
+                </div>
+                <div class="forms_field">
+                  <input type="Email" placeholder="Email" required="required" name='email' class="forms_field-input"/>
+                </div>
+                <div class="forms_field">
+                  <!-- <input type="tel" id="phone" class="forms_field-input" name='tele' required > -->
+                  {{ form.phone }}
+                </div>
+                <div class="forms_field">
+                  <!-- <select id="multiple-checkboxes" multiple="multiple" name='join' required class="forms_field-input">
+                    <option selected value disabled >Join As</option>
+                    <option value="php">Tour Operator</option>
+                    <option value="javascript">Hotel</option>
+                    <option value="java">Home Stay</option>
+                    <option value="sql">Event Organizer</option>
+                  </select> -->
+                  {{ form.join_as }}
+                  <!-- <select class="forms_field-input" required >
+                
+                <option</option>
+                <option></option>
+                <option></option>
+                <option>E</option>
+              </select> -->
+                </div>
+                <div class="forms_field">
+                  <!-- <select class="forms_field-input" name= 'category' required>
+                    <option>Category 1</option>
+                    <option>Category 2</option>
+                    <option>Category 3</option>
+                    <option>Category 4</option>
+                  </select> -->
+                  {{ form.category }}
+                </div>
+                <div class="forms_field">
+                  <label>How much discount you are offering.</label>
+                  <div class="row">
+                    <div class="col-md-6 wd-50">
+                      <label>Min</label>
+                      <!-- <input type="number" min="1" max="50" placeholder="5%" class="forms_field-input wd-36" name= 'discount' required /> -->
+                      {{ form.discount_min }}
+                    </div>
+                    <div class="col-md-6 wd-50">
+                      <label>Max</label>
+                      <!-- <input type="number" min="1" max="50" placeholder="50%" class="forms_field-input wd-36" name= 'discount' required /> -->
+                      {{ form.discount_max }}
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="forms_buttons">
+                <button class="buttons-action">REGISTER</button>
+                <!-- <a href="{{BASE_URL}}registers">
+                  <input type="button" value="Register" class="forms_buttons-action"> -->
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+  <script src="{% static 'js/bootstrap-multiselect.js' %}"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    $(document).ready(function() {
+            $('#id_join_as').multiselect({
+              includeSelectAllOption: true,
+            });
+        });
+  </script>
+  <script>
+    var telInput = $("#phone"),
+      errorMsg = $("#error-msg"),
+      validMsg = $("#valid-msg");
+    
+    // initialise plugin
+    telInput.intlTelInput({
+    
+      allowExtensions: true,
+      formatOnDisplay: true,
+      autoFormat: true,
+      autoHideDialCode: true,
+      autoPlaceholder: true,
+      defaultCountry: "in",
+      ipinfoToken: "yolo",
+    
+      nationalMode: false,
+      numberType: "MOBILE",
+      //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      preferredCountries: ['in', 'ae', 'qa','om','bh','kw','ma'],
+      preventInvalidNumbers: true,
+      separateDialCode: true,
+      initialCountry: "in",
+      geoIpLookup: function(callback) {
+      $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        var countryCode = (resp && resp.country) ? resp.country : "";
+        callback(countryCode);
+      });
+    },
+       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
+    });
+    
+    var reset = function() {
+      telInput.removeClass("error");
+      errorMsg.addClass("hide");
+      validMsg.addClass("hide");
+    };
+    
+    // on blur: validate
+    telInput.blur(function() {
+      reset();
+      if ($.trim(telInput.val())) {
+        if (telInput.intlTelInput("isValidNumber")) {
+          validMsg.removeClass("hide");
+        } else {
+          telInput.addClass("error");
+          errorMsg.removeClass("hide");
+        }
+      }
+    });
+    
+    // on keyup / change flag: reset
+    telInput.on("keyup change", reset);
+  </script>
+  <script>
+    /**
+   * Variables
+   */
+  const signupButton = document.getElementById('signup-button'),
+      loginButton = document.getElementById('login-button'),
+      userForms = document.getElementById('user_options-forms')
+  
+  /**
+   * Add event listener to the "Sign Up" button
+   */
+  signupButton.addEventListener('click', () => {
+    userForms.classList.remove('bounceRight')
+    userForms.classList.add('bounceLeft')
+  }, false)
+  
+  /**
+   * Add event listener to the "Login" button
+   */
+  loginButton.addEventListener('click', () => {
+    userForms.classList.remove('bounceLeft')
+    userForms.classList.add('bounceRight')
+  }, false)
+  </script>
+  <script type="text/javascript">
+    var cd;
+    
+    $(function(){
+      CreateCaptcha();
+    });
+    
+    // Create Captcha
+    function CreateCaptcha() {
+      //$('#InvalidCapthcaError').hide();
+      var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
+                        
+      var i;
+      for (i = 0; i < 6; i++) {
+        var a = alpha[Math.floor(Math.random() * alpha.length)];
+        var b = alpha[Math.floor(Math.random() * alpha.length)];
+        var c = alpha[Math.floor(Math.random() * alpha.length)];
+        var d = alpha[Math.floor(Math.random() * alpha.length)];
+        var e = alpha[Math.floor(Math.random() * alpha.length)];
+        var f = alpha[Math.floor(Math.random() * alpha.length)];
+      }
+      cd = a + ' ' + b + ' ' + c + ' ' + d + ' ' + e + ' ' + f;
+      $('#CaptchaImageCode').empty().append('<canvas id="CapCode" class="capcode" width="300" height="80"></canvas>')
+      
+      var c = document.getElementById("CapCode"),
+          ctx=c.getContext("2d"),
+          x = c.width / 2,
+          img = new Image();
+    
+      img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAA1BMVEX///+nxBvIAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBgxUwAAU+n3sIAAAAASUVORK5CYII=";
+      img.onload = function () {
+          var pattern = ctx.createPattern(img, "repeat");
+          ctx.fillStyle = pattern;
+          ctx.fillRect(0, 0, c.width, c.height);
+          ctx.font="46px Roboto Slab";
+          ctx.fillStyle = 'blue';
+          ctx.textAlign = 'center';
+          ctx.setTransform (1, -0.12, 0, 1, 0, 15);
+          ctx.fillText(cd,x,55);
+      };
+      
+      
+    }
+    
+    // Validate Captcha
+    function ValidateCaptcha() {
+      var string1 = removeSpaces(cd);
+      var string2 = removeSpaces($('#UserCaptchaCode').val());
+      if (string1 == string2) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    
+    // Remove Spaces
+    function removeSpaces(string) {
+      return string.split(' ').join('');
+    }
+    
+    // Check Captcha
+    function CheckCaptcha() {
+      var result = ValidateCaptcha();
+      if( $("#UserCaptchaCode").val() == "" || $("#UserCaptchaCode").val() == null || $("#UserCaptchaCode").val() == "undefined") {
+        $('#WrongCaptchaError').text('Please enter code given below in a picture.').show();
+        $('#UserCaptchaCode').focus();
+      } else {
+        if(result == false) { 
+          $('#WrongCaptchaError').text('Invalid Captcha! Please try again.').show();
+          CreateCaptcha();
+          $('#UserCaptchaCode').focus().select();
+        }
+        else { 
+          $('#UserCaptchaCode').val('').attr('place-holder','Enter Captcha - Case Sensitive');
+          CreateCaptcha();
+          $('#WrongCaptchaError').fadeOut(100);
+          $('#SuccessMessage').fadeIn(500).css('display','block').delay(5000).fadeOut(250);
+        }
+      }  
+    }
+  </script>
+</body>
+
+</html>

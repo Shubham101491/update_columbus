@@ -1,0 +1,113 @@
+{% extends "base/base_templates2.html" %}
+{% load static %}
+{% block content %}
+
+<!----------------Page Content Start------------>
+<section id="content-wrapper" style="background-color: #fff!important;">
+  <div class="container-fluid">
+    <div class="row pb-40">
+      <div class="col-md-6 wd-50">
+        <p class="dash-head" style="margin: 0;">Welcome : <span style="display: inline-block; margin-bottom: 0;">Username </span>
+        </p>
+      </div>
+      <div class="col-md-6 wd-50">
+        <p class="dash-head" style="text-align: right;margin-bottom: 0;">Last Login : <span style="display: inline-block; "> 12:00 PM </span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 wd-25">
+        <a href="{{BASE_URL}}hotel/my_hotel">
+        <div class="counter-card ">
+          <div class="count-icon text-center bg-red"> <i class="fa fa-home fa-2x"></i>
+          </div>
+          <div class="count-text">
+            <h2 class="timer count-title count-number" data-to="300" data-speed="1500"></h2>
+            <p class="">Hotels</p>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col-md-3 wd-25">
+        <a href="{{BASE_URL}}event/my_event">
+        <div class="counter-card ">
+          <div class="count-icon text-center bg-brown"> <i class="fa fa-calendar fa-2x"></i>
+          </div>
+          <div class="count-text">
+            <h2 class="timer count-title count-number" data-to="410" data-speed="1500"></h2>
+            <p class="">Events</p>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col-md-3 wd-25">
+        <a href="{{BASE_URL}}business/my_business">
+        <div class="counter-card ">
+          <div class="count-icon text-center bg-green"> <i class="fa fa-bus fa-2x"></i>
+          </div>
+          <div class="count-text">
+            <h2 class="timer count-title count-number" data-to="250" data-speed="1500"></h2>
+            <p class="">Travel</p>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col-md-3 wd-25">
+        <a href="{{BASE_URL}}homestay/my_homestay">
+        <div class="counter-card ">
+          <div class="count-icon text-center bg-orange"> <i class="fa fa-bed fa-2x"></i>
+          </div>
+          <div class="count-text">
+            <h2 class="timer count-title count-number" data-to="389" data-speed="1500"></h2>
+            <p class="">HomeStay</p>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+    <hr>
+    <section class="">
+      <div class="tour-head text-center">
+                    <div class="tour-head-title">
+                        <h1>Why Premium Lisiting</h1>
+                    </div>
+                </div>
+    <div class="row mt-20">
+
+      <div class="col-md-4 wd-32">
+        <div class="why-card">
+         <!--  <i class="fa fa-home"></i> -->
+          <img src="{% static 'images/hotel.png' %}">
+          <h2>Hotel</h2>
+          <p class="hidden-md">Reference site about Lorem Ipsum, giving information on its origins.</p>
+        </div>
+      </div>
+      <div class="col-md-4 wd-32">
+        <div class="why-card">
+          <!-- <i class="fa fa-calendar"></i> -->
+          <img src="{% static 'images/calendar.png' %}">
+          <h2>Events</h2>
+          <p class="hidden-md">Reference site about Lorem Ipsum, giving information on its origins.</p>
+        </div>
+      </div>
+      <div class="col-md-4 wd-32">
+        <div class="why-card">
+          <!-- <i class="fa fa-bed"></i> -->
+          <img src="{% static 'images/homestay.png' %}">
+          <h2>HomeStay</h2>
+          <p class="hidden-md">Reference site about Lorem Ipsum, giving information on its origins.</p>
+        </div>
+      </div>
+    </div>
+     <div class="row">
+                <div class="col-md-12 text-center">
+                  <a href="{{BASE_URL}}other/advertise_us">
+                    <input type="button" class="buttons-action" value="Know More" />
+                  </a>
+                </div>
+              </div>
+  </section>
+  </div>
+</section>
+
+{% endblock %}
