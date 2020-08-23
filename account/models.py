@@ -14,6 +14,7 @@ class user_register(models.Model):
         User_category, verbose_name="type", on_delete=models.CASCADE)
     discount_min = models.IntegerField()
     discount_max = models.IntegerField()
+    
 
     def __str__(self):
         return str(self.user)

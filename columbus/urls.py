@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+# For Media
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('home.urls','home'),namespace='home')),
@@ -30,4 +34,5 @@ urlpatterns = [
     path('dashboard/', include(('dashboard.urls','dashboard'),namespace='dashboard')),
     path('business/', include(('business.urls','business'),namespace='business')),
     path('myprofile/', include(('myprofile.urls','business'),namespace='myprofile')),
-]
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -14,6 +14,9 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 
+# Login Part
+from django.contrib.auth.decorators import login_required
+
 def registerpost(request):
     form = register
     if request.method == 'POST':
@@ -50,6 +53,7 @@ def registerpost(request):
         return render(request,"account/login-register.html",{'form':form})
 
 # User Login Part
+@login_required
 def userlogin(request):
     if request.method == 'POST':
         email_user = request.POST['email']
@@ -60,7 +64,7 @@ def userlogin(request):
                             "user_otp": get_user_data.otp}
             email_content = render_to_string(
                 'account/email_otp.html', data_content)
-            # email_content = "<hi>hello <h1>"
+            # email_content = "<h1>hello <h1>"
             msg = email.message.Message()
 
             msg['Subject'] = 'Welcome to my world'
@@ -115,3 +119,4 @@ def login_otp(request, user_code):
             return render(request, "account/login-otp.html")
     else:
         return render(request, "account/login-otp.html",{"user_data": user_data})
+    # return render(request, "account/login-otp.html")

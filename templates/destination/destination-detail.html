@@ -2,8 +2,11 @@
 {% load static %}
 {% block content %}
 
+        {% for d in locations %}
+
     <div id="wrapper">
-    	<div class="bg-one-banner" style="background-image: url({% static 'images/self/download.jpg' %})">
+    	<div class="bg-one-banner" style="background-image: url({{d.cover_photo.url}})">
+
     		<div class="detail-banner top-less hidden-md">
     			<h2>Mobor Beach</h2>
     			<p>Goa (India)</p>
@@ -28,8 +31,10 @@
           </div> -->
         </div>
       </div>
+    
 	    		<div class="col-md-12 p-t-b-20 detail-head">
-          <h2>Mobor Beach in Goa (India)</h2>
+          <h2>{{d.city}}</h2>
+
           <span class="text-secondary"><i class="fa fa-map-marker" style="margin-right: 5px;"></i>Apollo Bandar, Colaba,  Goa (India)</span>
         </div>
 	    	 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -46,9 +51,9 @@
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
               <div class="detail-tab-destination">
-                  	<span>Hotel Grand Peepal is a modern property with bright and cosy interiors, and located in Balmiki Colony in Karol Bagh, Delhi. It is very close to Regharpura Bus Stop, Karol Bagh Metro Station and Delhi Sarai Rohilla Railway Station. The Karol Bagh Market, Jhandewalan Mata Mandir, Rock Garden and Talkatora Indoor Stadium are close to the property too.</span><span id="dots" class="hidden-sm">...</span>
+                  	<span>{{d.about}}</span><span id="dots" class="hidden-sm">...</span>
             
-          <p id="more"><br>Hotel Grand Peepal is a modern property with bright and cosy interiors, and located in Balmiki Colony in Karol Bagh, Delhi. It is very close to Regharpura Bus Stop, Karol Bagh Metro Station and Delhi Sarai Rohilla Railway Station. The Karol Bagh Market, Jhandewalan Mata Mandir, Rock Garden and Talkatora Indoor Stadium are close to the property too.</p>
+          <p id="more"><br>{{d.title}}</p>
           <button onclick="myFunction()" id="myBtn" class="hidden-sm">Read more</button>
               </div>
               </div>
@@ -56,10 +61,10 @@
               	<div class="detail-tab-destination">
               		<div class="row">
               			<div class="col-md-4">
-              				<iframe width="560" height="315" src="https://www.youtube.com/embed/-Oa2rTw-rJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              				<iframe width="560" height="315" src="{{d.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               			</div>
               			<div class="col-md-4">
-              				<iframe width="560" height="315" src="https://www.youtube.com/embed/7cVnVfzWrew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              				<iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               			</div>
               			<div class="col-md-4">
               				<iframe width="560" height="315" src="https://www.youtube.com/embed/-Oa2rTw-rJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -72,35 +77,38 @@
               		<div class="row">
               			<div class="col-md-4">
               				<div class="showing-card">
-                        <img src="{% static 'images/mobor2.jpg' %}">
+                        <img src="{{d.photos.url}}">
                         <p>Mobor Beech </p>
                       </div>
               			</div>
               			<div class="col-md-4">
               				<div class="showing-card">
-                        <img src="{% static 'images/mobor3.jpg' %}">
+                        <img src="{{d.photos.url}}">
                         <p>Siting System </p>
                       </div>
               			</div>
               			<div class="col-md-4">
               				<div class="showing-card">
-                        <img src="{% static 'images/mobor3.jpg' %}">
+                        <img src="{{d.cover_photo.url}}">
                         <p>Mobor Beech Evening </p>
                       </div>
               			</div>
               		</div>
               	</div>
               </div>
+
               <div class="tab-pane fade" id="operator" role="tabpanel" aria-labelledby="operator-tab">
               <div class="detail-tab-destination">
-                    <p>Mobor Beach is located at about 16 km to the south of the Colva Beach, near the end of the Salsette coastline. This coastline is the point where Sal River flows into the Arabian Sea. It is situated in proximity to the Mobor Beach. Travellers can reach this place by taxis, auto rickshaws or buses from the Dabolim Airport. Trains are also available from various locations to reach the Madgaon Railway Station, which is the nearest railhead from the Mobor Beach.</p>
+                    <p>{{d.how_to_reach}}</p>
 
-                    <p>Ferry services are also available from North Goa to visit this beach that is located in the South Goa District. The ideal season to visit the Mobor Beach is from September to March, when the climate remains pleasant. Mobor Beach is also very famous for enjoying several watersports like windsurfing, jet skiing, speedboat rides and biking.  There are a wide range of beach shacks, bars, discotheques, small restaurants and shops around this beach that are crowded.</p>
+                    {% endfor %}
               </div>
               </div>
 	    </div>
 	</div>
-	</div>
+    </div>
+    
+    
     	<div class="bg-hotel p-t-b-40" style="background-image: url({% static 'images/icons/bg-5.png' %});">
     	<div class="container">
     		<div class="slider-hotel">
