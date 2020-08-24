@@ -1,7 +1,5 @@
-from django.shortcuts import render
 from columbus import settings
-
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect,HttpResponse, get_object_or_404
 from django.contrib.auth.models import User, auth
 from category.models import user_type, User_category
 from account.forms import register
@@ -10,12 +8,8 @@ from account.models import user_register
 import smtplib
 import email.message
 from django.core.mail import send_mail
-from django.conf import settings
 from django.template.loader import render_to_string
-from django.http import HttpResponse
 
-# Login Part
-from django.contrib.auth.decorators import login_required
 
 def registerpost(request):
     form = register
@@ -52,8 +46,6 @@ def registerpost(request):
         form = register()
         return render(request,"account/login-register.html",{'form':form})
 
-# User Login Part
-@login_required
 def userlogin(request):
     if request.method == 'POST':
         email_user = request.POST['email']
@@ -99,9 +91,11 @@ def login_otp(request, user_code):
         get_otp = "".join(get_otp_in_list)
         # print(user_data.user.email)
         print(get_otp)
-        if user_register.objects.filter(user_code=user_code).filter(otp=get_otp).exists():
-            # messages.info(request, 'welcome')
-            user = auth.authenticate(username=user_data.user.email, password=get_otp)
+
+        if user_register.objects.filter(user_code=user_code).filter(password=get_otp).exists():
+            username = str(user_data.user.username)
+            password = str(get_otp)
+            user = auth.authenticate(username=username, password= password)
             if user is not None:
                 auth.login(request, user)
                 # user_register.objects.create(user=request.user)
@@ -110,13 +104,9 @@ def login_otp(request, user_code):
                 return redirect("http://127.0.0.1:8000/dashboard/dashboard")
             else:
                 messages.info(request, 'invalid credentials')
-                # return redirect("userlogin")
+                return HttpResponse("userlogin")
             # return render(request, "web/home/dashboard.html")
 
         else:
-            # messages.info(request, 'otp is wrong')
-            # return redirect("http://127.0.0.1:8000/basic_app/login-register")
-            return render(request, "account/login-otp.html")
-    else:
-        return render(request, "account/login-otp.html",{"user_data": user_data})
-    # return render(request, "account/login-otp.html")
+            messages.info(request, 'otp is wrong')
+    return render(request, "account/login-otp.html",{"user_data": user_data})

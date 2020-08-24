@@ -2,10 +2,8 @@
 {% load static %}
 {% block content %}
 
-        {% for d in locations %}
-
     <div id="wrapper">
-    	<div class="bg-one-banner" style="background-image: url({{d.cover_photo.url}})">
+    	<div class="bg-one-banner" style="background-image: url({{dest_data.cover_photo.url}})">
 
     		<div class="detail-banner top-less hidden-md">
     			<h2>Mobor Beach</h2>
@@ -33,7 +31,7 @@
       </div>
     
 	    		<div class="col-md-12 p-t-b-20 detail-head">
-          <h2>{{d.city}}</h2>
+          <h2>{{dest_data.city}}</h2>
 
           <span class="text-secondary"><i class="fa fa-map-marker" style="margin-right: 5px;"></i>Apollo Bandar, Colaba,  Goa (India)</span>
         </div>
@@ -51,63 +49,71 @@
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
               <div class="detail-tab-destination">
-                  	<span>{{d.about}}</span><span id="dots" class="hidden-sm">...</span>
+                  	<span>{{dest_data.about}}</span><span id="dots" class="hidden-sm">...</span>
             
-          <p id="more"><br>{{d.title}}</p>
+          <p id="more"><br>{{dest_data.title}}</p>
           <button onclick="myFunction()" id="myBtn" class="hidden-sm">Read more</button>
+
               </div>
               </div>
               <div class="tab-pane fade" id="homestay" role="tabpanel" aria-labelledby="homestay-tab">
               	<div class="detail-tab-destination">
+
+                    {% for v in get_video %}
+
               		<div class="row">
               			<div class="col-md-4">
-              				<iframe width="560" height="315" src="{{d.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              				<iframe width="560" height="315" src="{{v.video.url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               			</div>
               			<div class="col-md-4">
               				<iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               			</div>
               			<div class="col-md-4">
-              				<iframe width="560" height="315" src="https://www.youtube.com/embed/-Oa2rTw-rJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              				<iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               			</div>
               		</div>
               	</div>
               </div>
+                        {% endfor %}
+
               <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">
               	<div class="detail-tab-destination">
+
+                    {% for i in pic %}
+
               		<div class="row">
               			<div class="col-md-4">
               				<div class="showing-card">
-                        <img src="{{d.photos.url}}">
+                        <img src="{{i.photos.url}}">
                         <p>Mobor Beech </p>
                       </div>
               			</div>
               			<div class="col-md-4">
               				<div class="showing-card">
-                        <img src="{{d.photos.url}}">
+                        <img src="{{i.photos.url}}">
                         <p>Siting System </p>
                       </div>
               			</div>
               			<div class="col-md-4">
               				<div class="showing-card">
-                        <img src="{{d.cover_photo.url}}">
+                        <img src="{{i.photos.url}}">
                         <p>Mobor Beech Evening </p>
                       </div>
               			</div>
               		</div>
               	</div>
               </div>
+                    {% endfor %}
 
               <div class="tab-pane fade" id="operator" role="tabpanel" aria-labelledby="operator-tab">
               <div class="detail-tab-destination">
-                    <p>{{d.how_to_reach}}</p>
+                    <p>{{dest_data.how_to_reach}}</p>
 
-                    {% endfor %}
               </div>
               </div>
 	    </div>
 	</div>
     </div>
-    
     
     	<div class="bg-hotel p-t-b-40" style="background-image: url({% static 'images/icons/bg-5.png' %});">
     	<div class="container">
