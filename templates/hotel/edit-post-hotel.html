@@ -3,7 +3,7 @@
 {% block content %}
 
 <!----------------COntent start-------------->
-<form method="POST" class="post-form" action="{{BASE_URL}}hotel/post_hotel/">
+<form method="POST" class="post-form" action="hotel/update/{{t.id}}">
   {% csrf_token %}
 <section id="content-wrapper">
   <div class="container-fluid">
@@ -22,15 +22,14 @@
                  <!--  <div class="col-md-12"> -->
                     <div class="form-group">
                         <label for="name" class="hidden-md">Hotel Name*</label>
-                        <!-- <input type="text" class="form-control" id="name" placeholder="Hotel Name" required > -->
-                        {{form.hotel_name}}
+                        <input type="text" class="form-control" id="name" placeholder="Hotel Name" required value="{{hotel.hotel_name}}" >
+                        
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-md-12"> -->
                     <div class="form-group">
                         <label for="name" class="hidden-md">Address*</label>
-                        <!-- <textarea rows="4" class="form-control" placeholder="Address" ></textarea> -->
-                        {{form.address}}
+                        <textarea rows="4" class="form-control" placeholder="Address" value="{{hotel.address}}"></textarea>
                     </div>
                   <!-- </div> -->
                 </div>
@@ -39,6 +38,8 @@
                   <!-- <div class="col-md-12"> -->
                     <div class="form-group">
                         <label for="name" class="hidden-md">Destination*</label>
+                        <input type="text" class="form-control" id="name" placeholder="Destination" value="{{hotel.destination}}" >
+                        <!-- <textarea rows="4" class="form-control" placeholder="Destination" value="{{ hotel.destination }}"></textarea> -->
                         <!-- <select placeholder=" "  id="single" class="js-states form-control">
                         <option disabled selected value></option>
                         <option>Goa</option>
@@ -47,15 +48,13 @@
                         <option>Kolkata</option>
                         <option>Delhi</option>
                         <option>Madhya Pradesh</option>
-                      </select>  -->
-                      {{form.destination}}
+                      </select> 
                     </div>
-                 <!--  </div> -->
+                 </div> -->
                   <!-- <div class="col-md-12"> -->
                     <div class="form-group">
                         <label for="name" class="hidden-md">Zip Code*</label>
-                        <!-- <input type="text" class="form-control" id="name" placeholder="Pin Code" > -->
-                        {{form.zipcode}}
+                        <input type="text" class="form-control" id="name" placeholder="Pin Code" value="{{hotel.zipcode}}" >
                     </div>
                 <!--   </div> -->
                   <!-- <div class="col-md-12"> -->
@@ -71,7 +70,7 @@
                   <!-- <div class="col-md-12"> -->
                          <div class="form-group">
                          <label>Star Rating*</label>
-                    <div class="rating" >
+                    <!-- <div class="rating" >
                           <input type="radio" id="star5" name="rating" value="5" />
                           <label class="full" for="star5" title="Awesome - 5 stars"></label>
                           <input type="radio" id="star4" name="rating" value="4" />
@@ -81,7 +80,7 @@
                           <input type="radio" id="star2" name="rating" value="2" />
                           <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
                           <input type="radio" id="star1" name="rating" value="1" />
-                          <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                          <label class="full" for="star1" title="Sucks big time - 1 star"></label> -->
                           
                           <!-- {{ form.star_rating }} -->
 
@@ -133,8 +132,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                   <label class="hidden-md">About Hotel</label>
-                    <!-- <textarea class="form-control" placeholder="About Hotel " rows="4" cols="50"></textarea> -->
-                    {{form.about_hotel}}
+                    <textarea class="form-control" placeholder="About Hotel " rows="4" cols="50" value="{{hotel.about_hotel}}"></textarea>
                 </div>
                 </div>
               </div>
@@ -151,8 +149,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="field" class="hidden-md">Image Name*</label>
-                          <input type="text" id="field" placeholder="Image Name"  class="form-control" name="field[]" />
-                          <!-- {{form.image}} -->
+                          <input type="text" id="field" placeholder="Image Name"  class="form-control" name="field[]" value="{{ hotel.image }}"/>
                           <label><input type="radio" name="cover" style="margin-right: 7px;">Cover Image</label>
                           
                       </div>
@@ -163,7 +160,7 @@
                           <input type="file">
                         </div>
                       </div>
-                      <!-- {{form.upload_image}} -->
+                      <!-- {{ form.upload_image }} -->
                     </div>
                     <!-- <div class="col-md-5">
                       <div class="form-group ">
@@ -189,14 +186,12 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="name" class="hidden-md">Room Type*</label>
-                        <input type="text" class="form-control" id="name" placeholder="Room Type" >
-                        <!-- {{ form.room_type }} -->
+                        <input type="text" class="form-control" id="name" placeholder="Room Type" value="{{ hotel.room_type }}">
                     </div>
                     </div>
                     <div class="col-md-6">
                       <label class="hidden-md">Cost Per Night</label>
-                        <input type="text" placeholder="Cost Per Night " id="field" class="form-control" name="field[]" />
-                        <!-- {{form.cost}} -->
+                        <input type="text" placeholder="Cost Per Night " id="field" class="form-control" name="field[]" value="{{ hotel.cost }}"/>
                     </div>
                   </div>
                 </div>
@@ -217,44 +212,37 @@
                 <div class="col-md-5">
                   <div class="form-group">
                         <label for="field" class="hidden-md">Facebook*</label>
-                          <!-- <input type="text"  placeholder="Facebook"  class="form-control" name="field[]" /> -->
-                          {{form.facebook}}
-
+                          <input type="text"  placeholder="Facebook"  class="form-control" name="field[]" value="{{ hotel.facebook }}"/>
                       </div>
                 </div>
                 <div class="col-md-5">
                    <div class="form-group">
                         <label for="field" class="hidden-md">Instagram*</label>
-                          <!-- <input type="text" placeholder="Instagram"  class="form-control" name="field[]" /> -->
-                          {{form.instagram}}
+                          <input type="text" placeholder="Instagram"  class="form-control" name="field[]" value="{{ hotel.instagram }}"/>
                       </div>
                 </div>
                  <div class="col-md-5">
                    <div class="form-group">
                         <label for="field" class="hidden-md">Linkedin*</label>
-                          <!-- <input type="text" placeholder="Linkedin"  class="form-control" name="field[]" /> -->
-                          {{form.linkdin}}
+                          <input type="text" placeholder="Linkedin"  class="form-control" name="field[]" value="{{ hotel.linkdin }}"/>
                       </div>
                 </div>
                  <div class="col-md-5">
                    <div class="form-group">
                         <label for="field" class="hidden-md">Twitter*</label>
-                          <!-- <input type="text" placeholder="Twitter"  class="form-control" name="field[]" /> -->
-                          {{form.twitter}}
+                          <input type="text" placeholder="Twitter"  class="form-control" name="field[]" value="{{ hotel.twitter }}"/>
                       </div>
                 </div>
                  <div class="col-md-5">
                    <div class="form-group">
                         <label for="field" class="hidden-md">Google User Id*</label>
-                          <!-- <input type="text" placeholder="Google Id"  class="form-control" name="field[]" /> -->
-                          {{form.google_user}}
+                          <input type="text" placeholder="Google Id"  class="form-control" name="field[]" value="{{ hotel.google_user }}"/>
                       </div>
                 </div>
                 <div class="col-md-5">
                    <div class="form-group">
                         <label for="field" class="hidden-md">Website Link</label>
-                          <!-- <input type="text" placeholder="Wensite Link"  class="form-control" name="field[]" /> -->
-                          {{form.website}}
+                          <input type="text" placeholder="Wensite Link"  class="form-control" name="field[]" value="{{ hotel.website }}"/>
                       </div>
                 </div>
               </div>
@@ -266,16 +254,14 @@
                 <div class="col-md-5">
                   <div class="form-group">
                         <label for="field" class="hidden-md">Latitude*</label>
-                          <!-- <input type="text" placeholder="Latitude"  class="form-control" name="field[]" /> -->
-                          {{form.latitude}}
+                          <input type="text" placeholder="Latitude"  class="form-control" name="field[]" value="{{ hotel.latitude }}"/>
                        
                       </div>
                 </div>
                 <div class="col-md-5">
                    <div class="form-group" >
                         <label for="field" class="hidden-md">Longitude*</label>
-                          <!-- <input type="text" placeholder="Longitude"  class="form-control" name="field[]" /> -->
-                          {{form.longitude}}
+                          <input type="text" placeholder="Longitude"  class="form-control" name="field[]" value="{{ hotel.longitude }}"/>
                       </div>
                 </div>
                 
@@ -287,7 +273,7 @@
               <div class="row">
                 <div class="col-md-12 text-center">
                   <!-- <a href="{{BASE_URL}}hotel_preview"> -->
-                    <input type="submit" class="buttons-action" value="Preview" />
+                    <input type="submit" class="buttons-action" value="Update" />
                   </a>
                 </div>
               </div>

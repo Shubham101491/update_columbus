@@ -1,3 +1,4 @@
 from django.contrib import admin
+from hotel.models import hotels_data
 
-# Register your models here.
+admin.site.register(hotels_data)
